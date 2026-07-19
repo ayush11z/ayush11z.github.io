@@ -14,14 +14,10 @@ profile:
 
 news: true  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
 I'm an incoming Master's student in Computer Science at UC San Diego, starting Fall 2026. My work sits at the intersection of agentic AI systems, applied machine learning, and health-focused NLP.
 
-At the [Halıcıoğlu Data Science Institute (HDSI)](https://datascience.ucsd.edu/), I work on an agentic bio-simulation pipeline, exploring algorithm-discovery and bandit-based strategies benchmarked against SkyDiscover. At the HXI Lab, I contribute to the UNDERSTAND project, using DPO and LoRA fine-tuning to study emotion regulation in language models.
-
-Outside of research, I worked at **Myna Voice Labs** on speech-based detection of Parkinson's disease, and have previously built a YOLOv8-based skin lesion classifier (81.75% accuracy), a LangGraph-based pipeline for automating professor outreach, and a retrieval-augmented generation (RAG) system.
-
-I'm broadly interested in building agentic systems that reason and act reliably, and in applying ML to real-world health problems. Feel free to reach out if you'd like to chat about any of this.
+Right now, I'm working on agentic AI systems, exploring algorithm-discovery strategies for bio-simulation pipelines, and using preference optimization techniques like DPO and LoRA to study emotion regulation in language models. I've also worked on speech-based disease detection using audio transformers, built a classification pipeline with real GPU training infrastructure, and developed agentic systems that automate research and outreach workflows end-to-end.
