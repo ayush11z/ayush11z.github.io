@@ -2,16 +2,15 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: MSCS Student, UC San Diego (starting Fall 2026)
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>UC San Diego</p>
+    <p>La Jolla, CA</p>
 
 news: true  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
@@ -19,8 +18,10 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I'm an incoming Master's student in Computer Science at UC San Diego, starting Fall 2026. My work sits at the intersection of agentic AI systems, applied machine learning, and health-focused NLP.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+At the [Halıcıoğlu Data Science Institute (HDSI)](https://datascience.ucsd.edu/), I work on an agentic bio-simulation pipeline, exploring algorithm-discovery and bandit-based strategies benchmarked against SkyDiscover. At the HXI Lab, I contribute to the UNDERSTAND project, using DPO and LoRA fine-tuning to study emotion regulation in language models.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Outside of research, I worked at **Myna Voice Labs** on speech-based detection of Parkinson's disease, and have previously built a YOLOv8-based skin lesion classifier (81.75% accuracy), a LangGraph-based pipeline for automating professor outreach, and a retrieval-augmented generation (RAG) system.
+
+I'm broadly interested in building agentic systems that reason and act reliably, and in applying ML to real-world health problems. Feel free to reach out if you'd like to chat about any of this.
