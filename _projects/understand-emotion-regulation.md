@@ -2,7 +2,7 @@
 layout: page
 title: "UNDERSTAND: Emotion-Regulation Data Pipeline for LLM Alignment"
 description: An AI system that recognizes emotional distress on social media and responds supportively.
-img:
+img: assets/img/understand-project.png
 importance: 1
 category: work
 ---
