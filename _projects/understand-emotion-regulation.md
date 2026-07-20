@@ -1,10 +1,10 @@
 ---
 layout: page
 title: "UNDERSTAND: Emotion-Regulation Data Pipeline for LLM Alignment"
-description: A CERQ-grounded dataset and DPO/LoRA pipeline for training LLMs to recognize and respond to emotionally charged situations.
+description: an AI pipeline teaching language models to understand human emotions
 img:
 importance: 1
-category: research
+category: work
 ---
 
 The UNDERSTAND project investigates whether language models can be trained to recognize and respond appropriately to emotionally charged situations, using CERQ (Cognitive Emotion Regulation Questionnaire) as a psychological framework for categorizing regulated versus dysregulated responses. The core challenge was building a large, labeled dataset of real emotional situations and paired responses that could actually be used to fine-tune a model's sensitivity to human emotional cues — something that doesn't exist off-the-shelf.
