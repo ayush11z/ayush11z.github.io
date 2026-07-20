@@ -1,13 +1,13 @@
 ---
 layout: page
 title: "UNDERSTAND: Emotion-Regulation Data Pipeline for LLM Alignment"
-description: an AI pipeline teaching language models to understand human emotions
+description: An AI system that recognizes emotional distress on social media and responds supportively.
 img:
 importance: 1
 category: work
 ---
 
-The UNDERSTAND project investigates whether language models can be trained to recognize and respond appropriately to emotionally charged situations, using CERQ (Cognitive Emotion Regulation Questionnaire) as a psychological framework for categorizing regulated versus dysregulated responses. The core challenge was building a large, labeled dataset of real emotional situations and paired responses that could actually be used to fine-tune a model's sensitivity to human emotional cues — something that doesn't exist off-the-shelf.
+The UNDERSTAND project explores building a therapeutic AI system that can recognize when someone on social media is struggling emotionally and respond in a genuinely supportive, regulated way — rather than a generic or dismissive one. Using CERQ (Cognitive Emotion Regulation Questionnaire) as a psychological framework, the project builds a large, labeled dataset of real emotional situations and paired responses to fine-tune a model's sensitivity to human emotional cues, something that doesn't exist off-the-shelf.
 
 This project was part of the [HXI Lab](https://hxi.ucsd.edu/) at UC San Diego, where I worked with [Professor Nadir Weibel](https://hxi.ucsd.edu/author/nadir-weibel/) and PhD mentor [Aaron Broukhim](https://aabroukh.github.io/).
 
@@ -26,4 +26,4 @@ Python, Reddit API, Llama Guard, sentence-transformers, Ollama, Qwen, Mistral, L
 
 #### Why It's Relevant
 
-Most LLM alignment work optimizes for helpfulness or harmlessness in the abstract — this project instead grounds alignment in a validated psychological framework, testing whether models can learn something closer to actual emotional intelligence rather than just surface-level politeness. It's directly relevant to my interest in making agentic systems more reliable in human-facing, emotionally sensitive contexts, like health or mental-health-adjacent applications.
+Social media is often where people first express emotional distress, but platforms aren't built to respond to that in a therapeutic way. This project grounds AI alignment in a validated psychological framework rather than generic helpfulness, working toward systems that can recognize distress and respond with real emotional intelligence. It's directly relevant to my interest in building agentic systems that are reliable in human-facing, emotionally sensitive contexts, especially in health and mental-health-adjacent applications.
