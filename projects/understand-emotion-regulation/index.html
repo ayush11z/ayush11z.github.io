@@ -119,22 +119,34 @@
 
 <p>This project was part of the <a href="https://hxi.ucsd.edu/" rel="external nofollow noopener" target="_blank">HXI Lab</a> at UC San Diego, where I worked with <a href="https://hxi.ucsd.edu/author/nadir-weibel/" rel="external nofollow noopener" target="_blank">Professor Nadir Weibel</a> and PhD mentor <a href="https://aabroukh.github.io/" rel="external nofollow noopener" target="_blank">Aaron Broukhim</a>.</p>
 
-<h4 id="what-i-worked-on">What I Worked On</h4>
+<hr>
+
+<h4 id="-what-i-worked-on">🔍 What I Worked On</h4>
 
 <ul>
-  <li>Built a Reddit-based data collection pipeline, gathering and filtering 110,000+ emotional-situation samples for the training set.</li>
-  <li>Used Llama Guard for initial safety filtering, and read through multiple papers on how other researchers separated safe from unsafe/controversial content to inform the filtering approach.</li>
-  <li>Applied sentence-transformers embeddings to separate posts by controversy level, using a distribution-based approach to distinguish moderately controversial content from highly controversial content — a similar statistical mindset to the conformal prediction work I used at Myna Voice Labs for robustness evaluation.</li>
-  <li>Read through the <a href="https://www.carepatron.com/files/cognitive-emotion-regulation-questionnaire-cerq.pdf" rel="external nofollow noopener" target="_blank">CERQ (Cognitive Emotion Regulation Questionnaire)</a> framework to define and label regulated vs. dysregulated response categories across all 9 CERQ dimensions.</li>
-  <li>Tested multiple open-source LLMs — Qwen, Mistral, LLaMA — locally via Ollama, and evaluated against Gemini to compare response quality across models.</li>
-  <li>Fine-tuned transformer models using DPO and LoRA on multi-GPU Nautilus clusters, training on pods of 4x A100 GPUs — using LoRA to reduce trainable parameters and training time compared to full fine-tuning.</li>
+  <li>
+<strong>Data collection</strong>: Built a Reddit-based data collection pipeline, gathering and filtering <strong>110,000+</strong> emotional-situation samples for the training set.</li>
+  <li>
+<strong>Safety filtering</strong>: Used <strong>Llama Guard</strong> for initial safety filtering, and read through multiple papers on how other researchers separated safe from unsafe/controversial content to inform the filtering approach.</li>
+  <li>
+<strong>Controversy filtering</strong>: Applied <strong>sentence-transformers</strong> embeddings to separate posts by controversy level, using a distribution-based approach to distinguish moderately controversial content from highly controversial content — a similar statistical mindset to the conformal prediction work I used at Myna Voice Labs for robustness evaluation.</li>
+  <li>
+<strong>Labeling framework</strong>: Read through the <a href="https://www.carepatron.com/files/cognitive-emotion-regulation-questionnaire-cerq.pdf" rel="external nofollow noopener" target="_blank">CERQ (Cognitive Emotion Regulation Questionnaire)</a> framework to define and label regulated vs. dysregulated response categories across all <strong>9 CERQ dimensions</strong>.</li>
+  <li>
+<strong>Model evaluation</strong>: Tested multiple open-source LLMs — <strong>Qwen</strong>, <strong>Mistral</strong>, <strong>LLaMA</strong> — locally via <strong>Ollama</strong>, and evaluated against <strong>Gemini</strong> to compare response quality across models.</li>
+  <li>
+<strong>Fine-tuning</strong>: Fine-tuned transformer models using <strong>DPO</strong> and <strong>LoRA</strong> on multi-GPU <strong>Nautilus</strong> clusters, training on pods of <strong>4x A100 GPUs</strong> — using LoRA to reduce trainable parameters and training time compared to full fine-tuning.</li>
 </ul>
 
-<h4 id="tech-stack">Tech Stack</h4>
+<hr>
+
+<h4 id="️-tech-stack">🛠️ Tech Stack</h4>
 
 <p>Python, Reddit API, Llama Guard, sentence-transformers, Ollama, Qwen, Mistral, LLaMA, Gemini, DPO, LoRA, Nautilus (multi-GPU HPC cluster), Vertex AI / GCP</p>
 
-<h4 id="why-its-relevant">Why It’s Relevant</h4>
+<hr>
+
+<h4 id="-why-its-relevant">💡 Why It’s Relevant</h4>
 
 <p>Social media is often where people first express emotional distress, but platforms aren’t built to respond to that in a therapeutic way. This project grounds AI alignment in a validated psychological framework rather than generic helpfulness, working toward systems that can recognize distress and respond with real emotional intelligence. It’s directly relevant to my interest in building agentic systems that are reliable in human-facing, emotionally sensitive contexts, especially in health and mental-health-adjacent applications.</p>
 
