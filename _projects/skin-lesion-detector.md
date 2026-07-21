@@ -1,8 +1,8 @@
 ---
 layout: page
 title: "Skin Lesion Detector"
-description: An AI system that classifies skin lesions to help catch skin cancer earlier.
-img:
+description: Comparing model architectures to classify skin lesions and help catch skin cancer earlier
+img: assets/img/skin-lesion-detector.jpeg
 importance: 5
 category: work
 ---
