@@ -1,10 +1,9 @@
 ---
-layout: page
+layout: project
 title: "LLM-Driven Algorithm Discovery"
 description: Using LLMs to automatically discover and improve algorithms for optimization problems.
-img: assets/img/bandit-algorithm-discovery.jpeg
+img: images/projects/bandit-algorithm-discovery.jpeg
 importance: 3
-category: work
 ---
 
 An AI system that automatically discovers algorithms is only as good as the search strategy behind it. This project builds a new **bandit-based** approach to LLM-driven algorithm discovery, benchmarked against existing frameworks like [**SkyDiscover**](https://github.com/skydiscover-ai/skydiscover) on classic optimization problems.

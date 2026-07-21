@@ -1,10 +1,9 @@
 ---
-layout: page
+layout: project
 title: "Customer Support Assistant: RAG Pipeline for Internal Query Answering"
 description: An AI assistant that answers customer support questions using internal company documentation.
-img: assets/img/hutech-rag-pipeline.jpeg
+img: images/projects/hutech-rag-pipeline.jpeg
 importance: 6
-category: work
 ---
 
 Manually searching through internal documentation to answer customer support queries is slow and inconsistent. This project builds a Retrieval-Augmented Generation (RAG) pipeline that lets a support assistant pull relevant information from internal docs automatically and generate accurate answers, instead of relying on manual search.

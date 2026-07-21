@@ -1,10 +1,9 @@
 ---
-layout: page
+layout: project
 title: "UNDERSTAND: Emotion-Regulation Data Pipeline for LLM Alignment"
 description: An AI system that recognizes emotional distress on social media and responds supportively.
-img: assets/img/understand-project.png
+img: images/projects/understand-project.png
 importance: 1
-category: work
 ---
 
 The UNDERSTAND project explores building a therapeutic AI system that can recognize when someone on social media is struggling emotionally and respond in a genuinely supportive, regulated way — rather than a generic or dismissive one. Using CERQ (Cognitive Emotion Regulation Questionnaire) as a psychological framework, the project builds a large, labeled dataset of real emotional situations and paired responses to fine-tune a model's sensitivity to human emotional cues, something that doesn't exist off-the-shelf.

@@ -1,18 +1,16 @@
 ---
-layout: page
+title: "Publications"
+layout: gridlay
+sitemap: false
 permalink: /publications/
-title: publications
-description:
-years: [2022]
-nav: true
-nav_order: 2
 ---
-<!-- _pages/publications.md -->
-<div class="publications">
 
-{%- for y in page.years %}
-  <h2 class="year">{{y}}</h2>
-  {% bibliography -f papers -q @*[year={{y}}]* %}
-{% endfor %}
+## Publications
 
+<input type="text" class="pub-search" id="pubSearch" placeholder="Filter by title, author, or year...">
+
+<div class="section-card" id="pubList">
+<h3>Papers</h3>
+
+{% bibliography --query @unpublished %}
 </div>

@@ -1,10 +1,9 @@
 ---
-layout: page
+layout: project
 title: "Skin Lesion Detector"
 description: Comparing model architectures to classify skin lesions and help catch skin cancer earlier
-img: assets/img/skin-lesion-detector.jpeg
+img: images/projects/skin-lesion-detector.jpeg
 importance: 5
-category: work
 ---
 
 Early detection is one of the biggest levers we have against skin cancer, and a lot of that detection ultimately depends on how well a model can tell dermoscopic images apart. This project started as a simple question: could we build a solid CNN classifier for skin lesions from scratch? It grew into something much bigger — a full comparison of model architectures backed by real training infrastructure, rather than a single notebook experiment.

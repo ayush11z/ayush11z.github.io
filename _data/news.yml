@@ -1,0 +1,8 @@
+# News items shown on the home page sidebar.
+# The 3 most recent are shown; all appear on /allnews.
+# Each entry needs: date, headline
+- date: 1 September, 2026
+  headline: "Starting my Master's in Computer Science at UC San Diego."
+
+- date: 1 June, 2026
+  headline: 'Started working with <a href="https://engineering.wisc.edu/directory/profile/dhananjay-bhaskar/">Prof. Dhananjay Bhaskar</a>''s lab at the University of Wisconsin-Madison.'

@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<div class="fade-in-section">
+  <p><a href="{{ site.url }}{{ site.baseurl }}/projects">&larr; All projects</a></p>
+
+  <h2>{{ page.title }}</h2>
+
+  {% if page.img %}
+  <div class="banner-frame" markdown="0">
+    <img src="{{ site.url }}{{ site.baseurl }}/{{ page.img }}" alt="{{ page.title }}" loading="lazy">
+  </div>
+  {% endif %}
+
+  {{ content }}
+</div>

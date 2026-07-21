@@ -1,24 +1,13 @@
 source 'https://rubygems.org'
-group :jekyll_plugins do
-    gem 'classifier-reborn'
-    gem 'jekyll'
-    gem 'jekyll-archives'
-    gem 'jekyll-diagrams'
-    gem 'jekyll-email-protect'
-    gem 'jekyll-feed'
-    gem 'jekyll-imagemagick'
-    gem 'jekyll-link-attributes'
-    gem 'jekyll-minifier'
-    gem 'jekyll-paginate-v2'
-    gem 'jekyll-scholar'
-    gem 'jekyll-sitemap'
-    gem 'jekyll-twitter-plugin'
-    gem 'jemoji'
-    gem 'mini_racer'
-    gem 'unicode_utils'
-    gem 'webrick'
-end
-group :other_plugins do
-    gem 'feedjira'
-    gem 'httparty'
-end
+
+gem "jekyll", "4.3.3"
+gem "sass-embedded", "~> 1.77.0"  # pin to avoid noisy deprecation warnings from Bootstrap SCSS
+gem "rack", ">= 2.2.3"
+gem "kramdown-parser-gfm"
+gem 'jekyll-scholar'
+gem 'jekyll-sitemap'
+gem "webrick", "~> 1.7"
+gem "csv"
+gem "base64"
+gem "bigdecimal"
+gem "observer"

@@ -1,10 +1,9 @@
 ---
-layout: page
+layout: project
 title: "Agentic AI for Computational Biology"
 description: An AI pipeline that turns biology research papers into working simulations.
-img: assets/img/agentic-computational-biology.jpeg
+img: images/projects/agentic-computational-biology.jpeg
 importance: 4
-category: work
 ---
 
 Turning a biology research paper into a working computational simulation usually takes a researcher days of manual work — reading the paper, extracting the right parameters, and hand coding the model. This project builds a multi-agent AI pipeline that automates that translation, converting biology papers directly into parameterized simulations.
