@@ -473,13 +473,43 @@ footer.sticky-bottom {
 }
 
 .projects a {
+  display: block;
+  height: 100%;
   text-decoration: none;
 }
 .projects a:hover .card-title {
   color: var(--global-theme-color);
 }
+.projects .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  box-shadow: none;
+}
+.projects .card figure {
+  margin: 0;
+}
 .projects .card img {
   width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.projects .card .card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  padding: 1.5rem 0.25rem;
+}
+.projects .card .card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.projects .card .card-text {
+  color: var(--global-text-color-light);
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 .projects .card-item {
   width: auto;
@@ -489,10 +519,17 @@ footer.sticky-bottom {
   display: flex;
   align-items: center;
 }
-.projects .grid-sizer,
+.projects .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+.projects .grid-sizer {
+  display: none;
+}
 .projects .grid-item {
-  width: 250px;
-  margin-bottom: 10px;
+  width: auto;
+  margin-bottom: 0;
 }
 .projects h2.category {
   color: var(--global-divider-color);
@@ -501,6 +538,9 @@ footer.sticky-bottom {
   margin-top: 2rem;
   margin-bottom: 1rem;
   text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 1rem;
 }
 
 .publications {
