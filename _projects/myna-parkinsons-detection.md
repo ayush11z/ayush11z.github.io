@@ -13,19 +13,19 @@ This project was a research collaboration with Princeton PhD scholars at [Myna V
 
 #### 🎙️ Dataset & Feature Engineering
 
-- Extracted **MFCC** (Mel-Frequency Cepstral Coefficients) features to represent the short-term power spectrum of speech, analyzing how well these handcrafted acoustic features aligned with what the **AST** transformer was learning internally from raw spectrograms.
+- Extracted **MFCC** (Mel-Frequency Cepstral Coefficients) features to represent the short-term power spectrum of speech, analyzing how well these handcrafted acoustic features aligned with what the **Audio Spectrogram Transformer (AST)** was learning internally from raw spectrograms.
 - Compared **OpenL3** and **Whisper** embeddings as alternative feature representations, evaluating each against **MFCC** and against each other to determine which embedding space carried the strongest signal for detecting Parkinson's-related speech patterns, since each model was trained on different upstream tasks (general audio understanding for **OpenL3**, speech recognition for **Whisper**) and could surface different aspects of the signal.
 - Trained the model against a range of audio perturbations — additive background noise, pitch shifting, time-stretching, and reverberation — to evaluate robustness under real-world recording conditions.
 - Contributed to a speech accessibility pipeline for multilingual data, extending the detection work toward broader usability across different languages and speech patterns.
 
 #### 🧠 Model Architecture & Validation
 
-- Fine-tuned a pretrained **Audio Spectrogram Transformer (AST)** (86M parameters, originally trained on **AudioSet**) end-to-end for binary Parkinson's vs. non-Parkinson's speech classification on a multilingual, held-out test set.
+- Fine-tuned a pretrained **AST** (86M parameters, originally trained on **AudioSet**) end-to-end for binary Parkinson's vs. non-Parkinson's speech classification on a multilingual, held-out test set.
 - Validated the model by hooking into its early, middle, and late transformer layers and comparing neuron activation patterns between classes — found consistent, separable differences at every depth (up to 2.5x in the late layers), confirming it learned real speech patterns rather than dataset artifacts.
 
 #### 🎲 Uncertainty Quantification
 
-- Built a **Monte Carlo Dropout** CNN (~824K parameters, dropout rate p=0.3) to generate calibrated confidence intervals for predictions, using repeated stochastic forward passes (T=10 to T=100) to estimate prediction uncertainty via **conformal** methods.
+- Built a **Monte Carlo Dropout** CNN (~824K parameters, dropout rate p=0.3) to generate calibrated confidence intervals for predictions, using repeated stochastic forward passes to estimate prediction uncertainty via **conformal** methods.
 - Validated the approach by testing across multiple confidence levels (80%–95% CIs), finding correctly classified samples produced consistently tight intervals (~0.02–0.04 width) while misclassified samples produced dramatically wider intervals (~0.5–0.75 width) — a ~20–28x separation that confirmed the method reliably flagged uncertain/incorrect predictions.
 - Applied this same **Bayesian** interval framework to evaluate the Parkinson's detection model's robustness under audio perturbations and noise, using prediction interval width as a signal for when the model's outputs should be trusted versus flagged for review.
 
