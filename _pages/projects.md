@@ -7,7 +7,7 @@ permalink: /projects/
 
 ## Projects
 
-<div class="research-grid">
+<div class="research-grid" markdown="0">
 {% assign sorted_projects = site.projects | sort: "importance" %}
 {% for project in sorted_projects %}
 <a href="{{ project.url | relative_url }}" style="text-decoration: none; color: inherit;">
