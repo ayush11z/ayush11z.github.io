@@ -7,7 +7,7 @@ importance: 3
 category: work
 ---
 
-An AI system that automatically discovers algorithms is only as good as the search strategy behind it. This project builds a new **bandit-based** approach to LLM-driven algorithm discovery, benchmarked against existing frameworks like **SkyDiscover** on classic optimization problems.
+An AI system that automatically discovers algorithms is only as good as the search strategy behind it. This project builds a new **bandit-based** approach to LLM-driven algorithm discovery, benchmarked against existing frameworks like [**SkyDiscover**](https://github.com/skydiscover-ai/skydiscover) on classic optimization problems.
 
 This project was research under [Professor Yusu Wang](https://yusu.belkin-wang.org/) at the [Halıcıoğlu Data Science Institute (HDSI)](https://datascience.ucsd.edu/), UC San Diego.
 
@@ -15,7 +15,7 @@ This project was research under [Professor Yusu Wang](https://yusu.belkin-wang.o
 
 #### 🔍 What I Worked On
 
-- **Bandit-based search**: Built a novel algorithm-discovery system using a **UCB (Upper Confidence Bound)** bandit strategy to guide LLM-driven search toward the most promising candidate solutions, analyzing existing frameworks like **SkyDiscover** and **ShinkaEvolve** to understand their search strategies as baseline references.
+- **Bandit-based search**: Built a novel algorithm-discovery system using a **UCB (Upper Confidence Bound)** bandit strategy to guide LLM-driven search toward the most promising candidate solutions, analyzing existing frameworks like **SkyDiscover** and [**ShinkaEvolve**](https://github.com/SakanaAI/shinkaevolve) to understand their search strategies as baseline references.
 - **Research mapping**: Used **Obsidian** to build a mental map of how these existing systems approached search, decomposition, and candidate selection, helping structure the design of the new bandit-based approach.
 - **Problem decomposition**: Designed a divide-and-conquer decomposition strategy that broke complex optimization tasks into smaller subproblems, allowing the LLM to reason over and solve each piece independently before recombining into a full solution.
 - **LLM orchestration**: Orchestrated LLM program generation using local, open-source models, tracking fitness-scored candidates over a **SQLite** strategy database.
