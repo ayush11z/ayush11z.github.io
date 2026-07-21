@@ -115,24 +115,36 @@
           </header>
 
           <article>
-            <p>An AI system that automatically discovers algorithms is only as good as the search strategy behind it. This project builds a new bandit-based approach to LLM-driven algorithm discovery, benchmarked against existing frameworks like SkyDiscover on classic optimization problems.</p>
+            <p>An AI system that automatically discovers algorithms is only as good as the search strategy behind it. This project builds a new <strong>bandit-based</strong> approach to LLM-driven algorithm discovery, benchmarked against existing frameworks like <strong>SkyDiscover</strong> on classic optimization problems.</p>
 
 <p>This project was research under <a href="https://yusu.belkin-wang.org/" rel="external nofollow noopener" target="_blank">Professor Yusu Wang</a> at the <a href="https://datascience.ucsd.edu/" rel="external nofollow noopener" target="_blank">Halıcıoğlu Data Science Institute (HDSI)</a>, UC San Diego.</p>
+
+<hr>
 
 <h4 id="-what-i-worked-on">🔍 What I Worked On</h4>
 
 <ul>
-  <li>Built a novel algorithm-discovery system using a UCB (Upper Confidence Bound) bandit strategy to guide LLM-driven search toward the most promising candidate solutions, analyzing existing frameworks like SkyDiscover and ShinkaEvolve to understand their search strategies as baseline references.</li>
-  <li>Used Obsidian to build a mental map of how these existing systems approached search, decomposition, and candidate selection, helping structure the design of the new bandit-based approach.</li>
-  <li>Designed a divide-and-conquer decomposition strategy that broke complex optimization tasks into smaller subproblems, allowing the LLM to reason over and solve each piece independently before recombining into a full solution.</li>
-  <li>Orchestrated LLM program generation using local, open-source models, tracking fitness-scored candidates over a SQLite strategy database.</li>
-  <li>Benchmarked performance against SkyDiscover on classic optimization tasks: on circle packing, the system reached a score of 1.56 versus SkyDiscover’s best of 1.53; on traveling salesman problem (TSP), the system outperformed SkyDiscover by roughly 0.1 points.</li>
-  <li>Wrote unit tests specifically targeting the bandit selection logic — verifying that UCB scores were computed correctly across exploration/exploitation tradeoffs, that the divide-and-conquer decomposition produced valid, recombinable subproblems, and that candidate fitness scores were tracked consistently in the SQLite database — alongside using VizTracer for real-time execution profiling to catch performance regressions during search runs.</li>
+  <li>
+<strong>Bandit-based search</strong>: Built a novel algorithm-discovery system using a <strong>UCB (Upper Confidence Bound)</strong> bandit strategy to guide LLM-driven search toward the most promising candidate solutions, analyzing existing frameworks like <strong>SkyDiscover</strong> and <strong>ShinkaEvolve</strong> to understand their search strategies as baseline references.</li>
+  <li>
+<strong>Research mapping</strong>: Used <strong>Obsidian</strong> to build a mental map of how these existing systems approached search, decomposition, and candidate selection, helping structure the design of the new bandit-based approach.</li>
+  <li>
+<strong>Problem decomposition</strong>: Designed a divide-and-conquer decomposition strategy that broke complex optimization tasks into smaller subproblems, allowing the LLM to reason over and solve each piece independently before recombining into a full solution.</li>
+  <li>
+<strong>LLM orchestration</strong>: Orchestrated LLM program generation using local, open-source models, tracking fitness-scored candidates over a <strong>SQLite</strong> strategy database.</li>
+  <li>
+<strong>Benchmarking</strong>: Benchmarked performance against <strong>SkyDiscover</strong> on classic optimization tasks — on circle packing, the system reached a score of <strong>1.56</strong> versus SkyDiscover’s best of <strong>1.53</strong>; on the traveling salesman problem (TSP), it outperformed SkyDiscover by roughly <strong>0.1</strong> points.</li>
+  <li>
+<strong>Testing &amp; profiling</strong>: Wrote unit tests specifically targeting the bandit selection logic — verifying that UCB scores were computed correctly across exploration/exploitation tradeoffs, that the divide-and-conquer decomposition produced valid, recombinable subproblems, and that candidate fitness scores were tracked consistently in the database — alongside using <strong>VizTracer</strong> for real-time execution profiling to catch performance regressions during search runs.</li>
 </ul>
+
+<hr>
 
 <h4 id="️-tech-stack">🛠️ Tech Stack</h4>
 
 <p>Python, UCB Bandit Algorithms, SQLite, VizTracer, Obsidian, Local LLMs (Ollama), SkyDiscover, ShinkaEvolve</p>
+
+<hr>
 
 <h4 id="-why-its-relevant">💡 Why It’s Relevant</h4>
 
