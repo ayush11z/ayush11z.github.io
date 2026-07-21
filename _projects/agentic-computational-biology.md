@@ -15,15 +15,16 @@ This project was a research collaboration with [Professor Dhananjay Bhaskar](htt
 
 #### 🔍 What I Worked On
 
-- **Multi-agent pipeline**: Contributed to a multi-agent pipeline (**Librarian**, **Coder**, **Engineer**, **Compiler**, **Debugger**, **Runner**) that reads biology papers and translates them into parameterized **PhysiCell**/**Morpheus** simulations using the **Hybrid Automata Library (HAL)**.
+- **Multi-agent pipeline**: Contributed to a multi-agent pipeline built with **LangChain** that reads biology papers and translates them into parameterized **PhysiCell**/**Morpheus** simulations using the **Hybrid Automata Library (HAL)**.
 - **Self-correction loop**: Designed a cyclical self-correction feedback loop that feeds the pipeline's final output back through itself for validation, catching errors before a simulation is finalized.
-- **Parameter retrieval**: Built a web search agent for the Engineer stage to automatically pull missing simulation parameters from external sources like **NCBI**, when a paper didn't specify every value needed.
+- **Parameter retrieval**: Built a **LangChain**-based web search agent to automatically pull missing simulation parameters from external sources like **NCBI**, when a paper didn't specify every value needed.
+- **Tracing & debugging**: Used **LangSmith** to trace and debug agent runs across the pipeline, making it easier to pinpoint where a translation failed across the multi-step Librarian-to-Runner flow.
 
 ---
 
 #### 🛠️ Tech Stack
 
-Python, PhysiCell, Morpheus, Hybrid Automata Library (HAL), LLM agent orchestration, NCBI API
+Python, LangChain, LangSmith, PhysiCell, Morpheus, Hybrid Automata Library (HAL), NCBI API
 
 ---
 
