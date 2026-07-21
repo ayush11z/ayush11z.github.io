@@ -2,7 +2,7 @@
 layout: page
 title: "Agentic AI for Computational Biology"
 description: An AI pipeline that turns biology research papers into working simulations.
-img:
+img: assets/img/agentic-computational-biology.jpeg
 importance: 4
 category: work
 ---
