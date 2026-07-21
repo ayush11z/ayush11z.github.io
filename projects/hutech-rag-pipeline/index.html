@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>projects | Ayush  Urs</title>
+    <title>Customer Support Assistant: RAG Pipeline for Internal Query Answering | Ayush  Urs</title>
     <meta name="author" content="Ayush  Urs">
-    <meta name="description" content="A growing collection of your cool projects.">
+    <meta name="description" content="An AI assistant that answers customer support questions using internal company documentation.">
     <meta name="keywords" content="ayush urs, machine learning, agentic ai, ucsd, portfolio">
 
 
@@ -33,7 +33,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://al-folio.github.io/projects/">
+    <link rel="canonical" href="https://al-folio.github.io/projects/hutech-rag-pipeline/">
     
     <!-- Dark Mode -->
     
@@ -73,8 +73,8 @@
               
 
               <!-- Other pages -->
-              <li class="nav-item active">
-                <a class="nav-link" href="/projects/">projects<span class="sr-only">(current)</span></a>
+              <li class="nav-item ">
+                <a class="nav-link" href="/projects/">projects</a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="/publications/">publications</a>
@@ -110,199 +110,97 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">projects</h1>
-            <p class="post-description">A growing collection of your cool projects.</p>
+            <h1 class="post-title">Customer Support Assistant: RAG Pipeline for Internal Query Answering</h1>
+            <p class="post-description">An AI assistant that answers customer support questions using internal company documentation.</p>
           </header>
 
           <article>
-            <!-- pages/projects.md -->
-<div class="projects">
-  <!-- Display categorized projects -->
-  <h2 class="category">work</h2>
-  <!-- Generate cards for each project -->
-  <div class="grid">
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/understand-emotion-regulation/">
-      <div class="card hoverable">
-<figure>
+            <p>Manually searching through internal documentation to answer customer support queries is slow and inconsistent. This project builds a Retrieval-Augmented Generation (RAG) pipeline that lets a support assistant pull relevant information from internal docs automatically and generate accurate answers, instead of relying on manual search.</p>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/understand-project-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/understand-project-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/understand-project-1400.webp"></source>
-    
+<p>This project was built during my internship as an AI / Full Stack Development Intern at Hutech Solutions.</p>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/understand-project.png" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<hr>
 
-  </picture>
+<h4 id="-retrieval-augmented-generation-pipeline">🔎 Retrieval-Augmented Generation Pipeline</h4>
 
-</figure>
+<ul>
+  <li>
+<strong>RAG pipeline</strong>: Built a Retrieval-Augmented Generation (RAG) pipeline using <strong>LangChain</strong> to combine semantic document retrieval with LLM-based answer generation.</li>
+  <li>
+<strong>Embeddings</strong>: Generated dense vector embeddings for internal documentation using <strong>sentence-transformers</strong> and indexed them in <strong>MongoDB Vector Search</strong> for semantic similarity search.</li>
+  <li>
+<strong>Chunking</strong>: Implemented document chunking and embedding workflows to improve retrieval accuracy across large internal knowledge bases.</li>
+  <li>
+<strong>Retrieval tuning</strong>: Tuned retrieval parameters such as chunk size and the number of retrieved documents to improve answer quality while keeping inference latency low.</li>
+</ul>
 
-        <div class="card-body">
-          <h2 class="card-title">UNDERSTAND: Emotion-Regulation Data Pipeline for LLM Alignment</h2>
-          <p class="card-text">An AI system that recognizes emotional distress on social media and responds supportively.</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/myna-parkinsons-detection/">
-      <div class="card hoverable">
-<figure>
+<hr>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/myna-parkinsons-project-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/myna-parkinsons-project-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/myna-parkinsons-project-1400.webp"></source>
-    
+<h4 id="-backend-api-development">🧩 Backend API Development</h4>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/myna-parkinsons-project.jpeg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<ul>
+  <li>
+<strong>REST APIs</strong>: Developed REST APIs with <strong>FastAPI</strong> to expose document retrieval and question-answering endpoints.</li>
+  <li>
+<strong>Modular services</strong>: Structured the backend so retrieval, embedding generation, and response generation were modular services, making the pipeline easier to maintain and extend.</li>
+  <li>
+<strong>Reliability</strong>: Added request validation, error handling, and asynchronous processing to support multiple concurrent users.</li>
+  <li>
+<strong>Integration</strong>: Designed the API to integrate cleanly with frontend applications and internal services.</li>
+</ul>
 
-  </picture>
+<hr>
 
-</figure>
+<h4 id="️-data--storage">🗄️ Data &amp; Storage</h4>
 
-        <div class="card-body">
-          <h2 class="card-title">Speech-Based Parkinson's Disease Detection</h2>
-          <p class="card-text">Using AI to detect early signs of Parkinson's disease from a person's voice.</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/bandit-algorithm-discovery/">
-      <div class="card hoverable">
-<figure>
+<ul>
+  <li>
+<strong>Vector storage</strong>: Used <strong>MongoDB Vector Search</strong> for semantic document retrieval and storage of document embeddings alongside metadata.</li>
+  <li>
+<strong>Ingestion pipelines</strong>: Built ingestion pipelines to preprocess documents, generate embeddings, and keep the vector index synchronized with updated documentation.</li>
+  <li>
+<strong>Metadata organization</strong>: Organized document metadata to improve filtering and retrieval efficiency.</li>
+</ul>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/bandit-algorithm-discovery-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/bandit-algorithm-discovery-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/bandit-algorithm-discovery-1400.webp"></source>
-    
+<hr>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/bandit-algorithm-discovery.jpeg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<h4 id="-evaluation--performance">📈 Evaluation &amp; Performance</h4>
 
-  </picture>
+<ul>
+  <li>
+<strong>Answer quality</strong>: Evaluated retrieval and answer quality across more than <strong>1,000</strong> internal support queries, achieving approximately <strong>75%</strong> answer relevance.</li>
+  <li>
+<strong>Configuration comparison</strong>: Compared retrieval configurations and embedding strategies to identify settings that produced the most useful responses.</li>
+  <li>
+<strong>Load testing</strong>: Measured response latency and throughput under concurrent workloads to validate production readiness.</li>
+  <li>
+<strong>Performance</strong>: Optimized API performance to maintain <strong>p95 response times of 1–2 seconds</strong> while serving over <strong>100 concurrent requests</strong>.</li>
+</ul>
 
-</figure>
+<hr>
 
-        <div class="card-body">
-          <h2 class="card-title">LLM-Driven Algorithm Discovery</h2>
-          <p class="card-text">Using LLMs to automatically discover and improve algorithms for optimization problems.</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/agentic-computational-biology/">
-      <div class="card hoverable">
-<figure>
+<h4 id="-deployment">🚀 Deployment</h4>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/agentic-computational-biology-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/agentic-computational-biology-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/agentic-computational-biology-1400.webp"></source>
-    
+<ul>
+  <li>
+<strong>Containerization</strong>: Containerized the application with <strong>Docker</strong> to ensure consistent deployment across development and production environments.</li>
+  <li>
+<strong>Reproducibility</strong>: Configured services for reproducible local development and simplified deployment workflows.</li>
+  <li>
+<strong>End-to-end validation</strong>: Verified the complete end-to-end pipeline, from document ingestion to answer generation, under realistic workloads.</li>
+</ul>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/agentic-computational-biology.jpeg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<hr>
 
-  </picture>
+<h4 id="️-tech-stack">🛠️ Tech Stack</h4>
 
-</figure>
+<p>Python, LangChain, sentence-transformers, MongoDB Vector Search, FastAPI, Docker</p>
 
-        <div class="card-body">
-          <h2 class="card-title">Agentic AI for Computational Biology</h2>
-          <p class="card-text">An AI pipeline that turns biology research papers into working simulations.</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/skin-lesion-detector/">
-      <div class="card hoverable">
-<figure>
+<hr>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/skin-lesion-detector-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/skin-lesion-detector-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/skin-lesion-detector-1400.webp"></source>
-    
+<h4 id="-why-its-relevant">💡 Why It’s Relevant</h4>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/skin-lesion-detector.jpeg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-        <div class="card-body">
-          <h2 class="card-title">Skin Lesion Detector</h2>
-          <p class="card-text">Comparing model architectures to classify skin lesions and help catch skin cancer earlier</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/hutech-rag-pipeline/">
-      <div class="card hoverable">
-<figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/hutech-rag-pipeline-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/hutech-rag-pipeline-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/hutech-rag-pipeline-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/hutech-rag-pipeline.jpeg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-        <div class="card-body">
-          <h2 class="card-title">Customer Support Assistant: RAG Pipeline for Internal Query Answering</h2>
-          <p class="card-text">An AI assistant that answers customer support questions using internal company documentation.</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-  </div>
-</div>
+<p>Customer support is one of the clearest real-world use cases for RAG: users need fast, accurate answers pulled from a large body of internal knowledge, not generic responses. This project gave me hands-on experience with the full pipeline, from retrieval quality and chunking strategy to deployment under real concurrent load, which is directly relevant to my interest in building AI systems that hold up under real usage, not just in a demo.</p>
 
           </article>
 
