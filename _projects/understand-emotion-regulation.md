@@ -9,7 +9,7 @@ category: work
 
 The UNDERSTAND project explores building a therapeutic AI system that can recognize when someone on social media is struggling emotionally and respond in a genuinely supportive, regulated way — rather than a generic or dismissive one. Using CERQ (Cognitive Emotion Regulation Questionnaire) as a psychological framework, the project builds a large, labeled dataset of real emotional situations and paired responses to fine-tune a model's sensitivity to human emotional cues, something that doesn't exist off-the-shelf.
 
-This project was part of the [HXI Lab](https://hxi.ucsd.edu/) at UC San Diego, where I worked with [Professor Nadir Weibel](https://hxi.ucsd.edu/author/nadir-weibel/) and PhD mentor [Aaron Broukhim](https://aabroukh.github.io/).
+This project was part of the [HXI Lab](https://hxi.ucsd.edu/) at UC San Diego, where I worked with [Professor Nadir Weibel](https://hxi.ucsd.edu/author/nadir-weibel/) and PhD mentor [Aaron Broukhim](https://aabroukh.github.io/). A paper on this work is currently in preparation and will be published soon.
 
 ---
 
