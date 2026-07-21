@@ -125,18 +125,20 @@
 
 <ul>
   <li>
-<strong>Multi-agent pipeline</strong>: Contributed to a multi-agent pipeline (<strong>Librarian</strong>, <strong>Coder</strong>, <strong>Engineer</strong>, <strong>Compiler</strong>, <strong>Debugger</strong>, <strong>Runner</strong>) that reads biology papers and translates them into parameterized <strong>PhysiCell</strong>/<strong>Morpheus</strong> simulations using the <strong>Hybrid Automata Library (HAL)</strong>.</li>
+<strong>Multi-agent pipeline</strong>: Contributed to a multi-agent pipeline built with <strong>LangChain</strong> that reads biology papers and translates them into parameterized <strong>PhysiCell</strong>/<strong>Morpheus</strong> simulations using the <strong>Hybrid Automata Library (HAL)</strong>.</li>
   <li>
 <strong>Self-correction loop</strong>: Designed a cyclical self-correction feedback loop that feeds the pipeline’s final output back through itself for validation, catching errors before a simulation is finalized.</li>
   <li>
-<strong>Parameter retrieval</strong>: Built a web search agent for the Engineer stage to automatically pull missing simulation parameters from external sources like <strong>NCBI</strong>, when a paper didn’t specify every value needed.</li>
+<strong>Parameter retrieval</strong>: Built a <strong>LangChain</strong>-based web search agent to automatically pull missing simulation parameters from external sources like <strong>NCBI</strong>, when a paper didn’t specify every value needed.</li>
+  <li>
+<strong>Tracing &amp; debugging</strong>: Used <strong>LangSmith</strong> to trace and debug agent runs across the pipeline, making it easier to pinpoint where a translation failed across the multi-step Librarian-to-Runner flow.</li>
 </ul>
 
 <hr>
 
 <h4 id="️-tech-stack">🛠️ Tech Stack</h4>
 
-<p>Python, PhysiCell, Morpheus, Hybrid Automata Library (HAL), LLM agent orchestration, NCBI API</p>
+<p>Python, LangChain, LangSmith, PhysiCell, Morpheus, Hybrid Automata Library (HAL), NCBI API</p>
 
 <hr>
 
