@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Speech-Based Parkinson's Disease Detection | Ayush  Urs</title>
     <meta name="author" content="Ayush  Urs">
-    <meta name="description" content="An AI system that detects early signs of Parkinson's disease from voice recordings.">
+    <meta name="description" content="Using AI to detect early signs of Parkinson's disease from a person's voice.">
     <meta name="keywords" content="ayush urs, machine learning, agentic ai, ucsd, portfolio">
 
 
@@ -111,7 +111,7 @@
 
           <header class="post-header">
             <h1 class="post-title">Speech-Based Parkinson's Disease Detection</h1>
-            <p class="post-description">An AI system that detects early signs of Parkinson's disease from voice recordings.</p>
+            <p class="post-description">Using AI to detect early signs of Parkinson's disease from a person's voice.</p>
           </header>
 
           <article>
@@ -119,7 +119,7 @@
 
 <p>This project was a research collaboration with Princeton PhD scholars at Myna Voice Labs.</p>
 
-<h4 id="dataset--feature-engineering">Dataset &amp; Feature Engineering</h4>
+<h4 id="️-dataset--feature-engineering">🎙️ Dataset &amp; Feature Engineering</h4>
 
 <ul>
   <li>Extracted MFCC (Mel-Frequency Cepstral Coefficients) features to represent the short-term power spectrum of speech, analyzing how well these handcrafted acoustic features aligned with what the AST transformer was learning internally from raw spectrograms.</li>
@@ -128,14 +128,14 @@
   <li>Contributed to a speech accessibility pipeline for multilingual data, extending the detection work toward broader usability across different languages and speech patterns.</li>
 </ul>
 
-<h4 id="model-architecture--validation">Model Architecture &amp; Validation</h4>
+<h4 id="-model-architecture--validation">🧠 Model Architecture &amp; Validation</h4>
 
 <ul>
   <li>Fine-tuned a pretrained Audio Spectrogram Transformer (86M parameters, originally trained on AudioSet) end-to-end for binary Parkinson’s vs. non-Parkinson’s speech classification on a multilingual, held-out test set.</li>
   <li>Validated the model by hooking into its early, middle, and late transformer layers and comparing neuron activation patterns between classes — found consistent, separable differences at every depth (up to 2.5x in the late layers), confirming it learned real speech patterns rather than dataset artifacts.</li>
 </ul>
 
-<h4 id="uncertainty-quantification">Uncertainty Quantification</h4>
+<h4 id="-uncertainty-quantification">🎲 Uncertainty Quantification</h4>
 
 <ul>
   <li>Built a Monte Carlo Dropout CNN (~824K parameters, dropout rate p=0.3) to generate calibrated confidence intervals for predictions, using repeated stochastic forward passes (T=10 to T=100) to estimate prediction uncertainty via conformal methods.</li>
@@ -143,13 +143,13 @@
   <li>Applied this same Bayesian interval framework to evaluate the Parkinson’s detection model’s robustness under audio perturbations and noise, using prediction interval width as a signal for when the model’s outputs should be trusted versus flagged for review.</li>
 </ul>
 
-<h4 id="training-infrastructure">Training Infrastructure</h4>
+<h4 id="️-training-infrastructure">⚙️ Training Infrastructure</h4>
 
 <ul>
   <li>Ran multi-GPU training on Vertex AI, distributing training across GPUs to handle the compute demands of fine-tuning the AST model at scale.</li>
 </ul>
 
-<h4 id="tech-stack">Tech Stack</h4>
+<h4 id="️-tech-stack">🛠️ Tech Stack</h4>
 
 <p>Python, PyTorch, Audio Spectrogram Transformer (AST), MFCC, OpenL3, Whisper, Monte Carlo Dropout, Conformal Prediction, Bayesian Inference, Vertex AI (multi-GPU)</p>
 
