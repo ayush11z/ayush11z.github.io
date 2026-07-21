@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>projects | Ayush  Urs</title>
+    <title>Skin Lesion Detector | Ayush  Urs</title>
     <meta name="author" content="Ayush  Urs">
-    <meta name="description" content="A growing collection of your cool projects.">
+    <meta name="description" content="An AI system that classifies skin lesions to help catch skin cancer earlier.">
     <meta name="keywords" content="ayush urs, machine learning, agentic ai, ucsd, portfolio">
 
 
@@ -33,7 +33,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://al-folio.github.io/projects/">
+    <link rel="canonical" href="https://al-folio.github.io/projects/skin-lesion-detector/">
     
     <!-- Dark Mode -->
     
@@ -73,8 +73,8 @@
               
 
               <!-- Other pages -->
-              <li class="nav-item active">
-                <a class="nav-link" href="/projects/">projects<span class="sr-only">(current)</span></a>
+              <li class="nav-item ">
+                <a class="nav-link" href="/projects/">projects</a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="/publications/">publications</a>
@@ -110,153 +110,67 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">projects</h1>
-            <p class="post-description">A growing collection of your cool projects.</p>
+            <h1 class="post-title">Skin Lesion Detector</h1>
+            <p class="post-description">An AI system that classifies skin lesions to help catch skin cancer earlier.</p>
           </header>
 
           <article>
-            <!-- pages/projects.md -->
-<div class="projects">
-  <!-- Display categorized projects -->
-  <h2 class="category">work</h2>
-  <!-- Generate cards for each project -->
-  <div class="grid">
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/understand-emotion-regulation/">
-      <div class="card hoverable">
-<figure>
+            <p>Early detection is one of the biggest levers we have against skin cancer, and a lot of that detection ultimately depends on how well a model can tell dermoscopic images apart. This project started as a simple question: could we build a solid CNN classifier for skin lesions from scratch? It grew into something much bigger — a full comparison of model architectures backed by real training infrastructure, rather than a single notebook experiment.</p>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/understand-project-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/understand-project-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/understand-project-1400.webp"></source>
-    
+<p>I contributed to this as part of a 9-person team through CSES Innovate at UC San Diego.</p>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/understand-project.png" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<hr>
 
-  </picture>
+<h4 id="-getting-the-data-ready">📊 Getting the Data Ready</h4>
 
-</figure>
+<ul>
+  <li>
+<strong>Preprocessing</strong>: Every image was sorted by lesion type, resized to a consistent 256×256, and normalized using per-channel statistics computed with <strong>OpenCV</strong>.</li>
+  <li>
+<strong>Live augmentation</strong>: Since some lesion classes had far fewer examples than others, augmentation happened live during training instead of pre-generating a fixed set of images — each epoch effectively saw a fresh set of variations, keeping storage flat while still giving the model more diversity to learn from.</li>
+  <li>
+<strong>Evaluation</strong>: Kept evaluation honest with a 60/20/20 split and an untouched, unaugmented test set.</li>
+</ul>
 
-        <div class="card-body">
-          <h2 class="card-title">UNDERSTAND: Emotion-Regulation Data Pipeline for LLM Alignment</h2>
-          <p class="card-text">An AI system that recognizes emotional distress on social media and responds supportively.</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/myna-parkinsons-detection/">
-      <div class="card hoverable">
-<figure>
+<hr>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/myna-parkinsons-project-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/myna-parkinsons-project-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/myna-parkinsons-project-1400.webp"></source>
-    
+<h4 id="-trying-different-architectures">🧪 Trying Different Architectures</h4>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/myna-parkinsons-project.jpeg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<p>Rather than committing to one model, the team tested a progression:</p>
 
-  </picture>
+<ul>
+  <li>
+<strong>Custom CNN</strong>: Built from scratch in <strong>PyTorch</strong>, following the structure of the original reference paper.</li>
+  <li>
+<strong>Transfer learning</strong>: Used <strong>EfficientNet B0</strong> and <strong>ResNet18</strong>, trained with label smoothing and mixed precision.</li>
+  <li>
+<strong>YOLOv8s</strong>: The strongest and most thoroughly trained option, reaching <strong>81.75%</strong> top-1 accuracy and <strong>99.84%</strong> top-5 accuracy on held-out data.</li>
+</ul>
 
-</figure>
+<hr>
 
-        <div class="card-body">
-          <h2 class="card-title">Speech-Based Parkinson's Disease Detection</h2>
-          <p class="card-text">Using AI to detect early signs of Parkinson's disease from a person's voice.</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/bandit-algorithm-discovery/">
-      <div class="card hoverable">
-<figure>
+<h4 id="️-making-training-actually-scale">⚙️ Making Training Actually Scale</h4>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/bandit-algorithm-discovery-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/bandit-algorithm-discovery-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/bandit-algorithm-discovery-1400.webp"></source>
-    
+<ul>
+  <li>
+<strong>Containerized training</strong>: Ran training inside <strong>Docker</strong> containers built on a <strong>CUDA 12.1</strong> base image with PyTorch and Ultralytics installed.</li>
+  <li>
+<strong>Kubernetes orchestration</strong>: Deployed as batch jobs on <strong>Kubernetes</strong> across <strong>A100</strong> GPU nodes, with persistent volumes handling dataset and checkpoint storage and interactive pods enabling mid-run debugging.</li>
+  <li>
+<strong>Training efficiency</strong>: Used multi-GPU support alongside early stopping and learning rate scheduling to keep training efficient rather than wasteful.</li>
+</ul>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/bandit-algorithm-discovery.jpeg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<hr>
 
-  </picture>
+<h4 id="️-tech-stack">🛠️ Tech Stack</h4>
 
-</figure>
+<p>PyTorch, YOLOv8, Ultralytics, Docker, Kubernetes, OpenCV, EfficientNet, ResNet</p>
 
-        <div class="card-body">
-          <h2 class="card-title">LLM-Driven Algorithm Discovery</h2>
-          <p class="card-text">Using LLMs to automatically discover and improve algorithms for optimization problems.</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/agentic-computational-biology/">
-      <div class="card hoverable">
-<figure>
+<hr>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/agentic-computational-biology-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/agentic-computational-biology-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/agentic-computational-biology-1400.webp"></source>
-    
+<h4 id="-why-its-relevant">💡 Why It’s Relevant</h4>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/agentic-computational-biology.jpeg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-        <div class="card-body">
-          <h2 class="card-title">Agentic AI for Computational Biology</h2>
-          <p class="card-text">An AI pipeline that turns biology research papers into working simulations.</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/skin-lesion-detector/">
-      <div class="card hoverable">
-        <div class="card-body">
-          <h2 class="card-title">Skin Lesion Detector</h2>
-          <p class="card-text">An AI system that classifies skin lesions to help catch skin cancer earlier.</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-  </div>
-</div>
+<p>This project is where I first had to think past just training a model and toward everything around it: reliable data pipelines, fair architecture comparisons, and infrastructure that could actually scale beyond a single GPU. It shaped how I think about building ML systems meant to hold up outside a notebook.</p>
 
           </article>
 
