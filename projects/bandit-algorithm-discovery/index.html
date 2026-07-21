@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bandit-Based Algorithm Discovery vs. SkyDiscover | Ayush  Urs</title>
+    <title>LLM-Driven Algorithm Discovery | Ayush  Urs</title>
     <meta name="author" content="Ayush  Urs">
-    <meta name="description" content="An AI system that learns where to search to discover better algorithms, faster.">
+    <meta name="description" content="Using LLMs to automatically discover and improve algorithms for optimization problems.">
     <meta name="keywords" content="ayush urs, machine learning, agentic ai, ucsd, portfolio">
 
 
@@ -110,8 +110,8 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">Bandit-Based Algorithm Discovery vs. SkyDiscover</h1>
-            <p class="post-description">An AI system that learns where to search to discover better algorithms, faster.</p>
+            <h1 class="post-title">LLM-Driven Algorithm Discovery</h1>
+            <p class="post-description">Using LLMs to automatically discover and improve algorithms for optimization problems.</p>
           </header>
 
           <article>
@@ -119,7 +119,7 @@
 
 <p>This project was research under <a href="https://yusu.belkin-wang.org/" rel="external nofollow noopener" target="_blank">Professor Yusu Wang</a> at the <a href="https://datascience.ucsd.edu/" rel="external nofollow noopener" target="_blank">Halıcıoğlu Data Science Institute (HDSI)</a>, UC San Diego.</p>
 
-<h4 id="what-i-worked-on">What I Worked On</h4>
+<h4 id="-what-i-worked-on">🔍 What I Worked On</h4>
 
 <ul>
   <li>Built a novel algorithm-discovery system using a UCB (Upper Confidence Bound) bandit strategy to guide LLM-driven search toward the most promising candidate solutions, analyzing existing frameworks like SkyDiscover and ShinkaEvolve to understand their search strategies as baseline references.</li>
@@ -130,11 +130,11 @@
   <li>Wrote unit tests specifically targeting the bandit selection logic — verifying that UCB scores were computed correctly across exploration/exploitation tradeoffs, that the divide-and-conquer decomposition produced valid, recombinable subproblems, and that candidate fitness scores were tracked consistently in the SQLite database — alongside using VizTracer for real-time execution profiling to catch performance regressions during search runs.</li>
 </ul>
 
-<h4 id="tech-stack">Tech Stack</h4>
+<h4 id="️-tech-stack">🛠️ Tech Stack</h4>
 
 <p>Python, UCB Bandit Algorithms, SQLite, VizTracer, Obsidian, Local LLMs (Ollama), SkyDiscover, ShinkaEvolve</p>
 
-<h4 id="why-its-relevant">Why It’s Relevant</h4>
+<h4 id="-why-its-relevant">💡 Why It’s Relevant</h4>
 
 <p>Most algorithm-discovery frameworks treat search strategy as an afterthought bolted onto whichever LLM is available. This project treats it as the core research question — how do you allocate limited compute and LLM calls toward the most promising candidates, using classic bandit theory instead of naive search? That’s directly relevant to my broader interest in making agentic systems more efficient and reliable, not just capable.</p>
 
