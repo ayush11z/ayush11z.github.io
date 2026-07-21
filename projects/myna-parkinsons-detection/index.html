@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>projects | Ayush  Urs</title>
+    <title>Speech-Based Parkinson's Disease Detection | Ayush  Urs</title>
     <meta name="author" content="Ayush  Urs">
-    <meta name="description" content="A growing collection of your cool projects.">
+    <meta name="description" content="An AI system that detects early signs of Parkinson's disease from voice recordings.">
     <meta name="keywords" content="ayush urs, machine learning, agentic ai, ucsd, portfolio">
 
 
@@ -33,7 +33,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://al-folio.github.io/projects/">
+    <link rel="canonical" href="https://al-folio.github.io/projects/myna-parkinsons-detection/">
     
     <!-- Dark Mode -->
     
@@ -73,8 +73,8 @@
               
 
               <!-- Other pages -->
-              <li class="nav-item active">
-                <a class="nav-link" href="/projects/">projects<span class="sr-only">(current)</span></a>
+              <li class="nav-item ">
+                <a class="nav-link" href="/projects/">projects</a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="/publications/">publications</a>
@@ -110,231 +110,48 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">projects</h1>
-            <p class="post-description">A growing collection of your cool projects.</p>
+            <h1 class="post-title">Speech-Based Parkinson's Disease Detection</h1>
+            <p class="post-description">An AI system that detects early signs of Parkinson's disease from voice recordings.</p>
           </header>
 
           <article>
-            <!-- pages/projects.md -->
-<div class="projects">
-  <!-- Display categorized projects -->
-  <h2 class="category">work</h2>
-  <!-- Generate cards for each project -->
-  <div class="grid">
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/1_project/">
-      <div class="card hoverable">
-<figure>
+            <p>Parkinson’s disease often changes the way a person speaks years before other symptoms become obvious. This project explores whether AI models can pick up on those subtle vocal changes, working toward a low-cost, non-invasive way to flag Parkinson’s risk from a simple voice recording — with a particular focus on making the models reliable across languages and real-world, noisy audio conditions rather than just clean lab recordings.</p>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/12-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/12-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/12-1400.webp"></source>
-    
+<p>This project was a research collaboration with Princeton PhD scholars at Myna Voice Labs.</p>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/12.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<h4 id="dataset--feature-engineering">Dataset &amp; Feature Engineering</h4>
 
-  </picture>
+<ul>
+  <li>Extracted MFCC (Mel-Frequency Cepstral Coefficients) features to represent the short-term power spectrum of speech, analyzing how well these handcrafted acoustic features aligned with what the AST transformer was learning internally from raw spectrograms.</li>
+  <li>Compared OpenL3 and Whisper embeddings as alternative feature representations, evaluating each against MFCC and against each other to determine which embedding space carried the strongest signal for detecting Parkinson’s-related speech patterns, since each model was trained on different upstream tasks (general audio understanding for OpenL3, speech recognition for Whisper) and could surface different aspects of the signal.</li>
+  <li>Trained the model against a range of audio perturbations — additive background noise, pitch shifting, time-stretching, and reverberation — to evaluate robustness under real-world recording conditions.</li>
+  <li>Contributed to a speech accessibility pipeline for multilingual data, extending the detection work toward broader usability across different languages and speech patterns.</li>
+</ul>
 
-</figure>
+<h4 id="model-architecture--validation">Model Architecture &amp; Validation</h4>
 
-        <div class="card-body">
-          <h2 class="card-title text-lowercase">project 1</h2>
-          <p class="card-text">a project with a background image</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/understand-emotion-regulation/">
-      <div class="card hoverable">
-<figure>
+<ul>
+  <li>Fine-tuned a pretrained Audio Spectrogram Transformer (86M parameters, originally trained on AudioSet) end-to-end for binary Parkinson’s vs. non-Parkinson’s speech classification on a multilingual, held-out test set.</li>
+  <li>Validated the model by hooking into its early, middle, and late transformer layers and comparing neuron activation patterns between classes — found consistent, separable differences at every depth (up to 2.5x in the late layers), confirming it learned real speech patterns rather than dataset artifacts.</li>
+</ul>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/understand-project-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/understand-project-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/understand-project-1400.webp"></source>
-    
+<h4 id="uncertainty-quantification">Uncertainty Quantification</h4>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/understand-project.png" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<ul>
+  <li>Built a Monte Carlo Dropout CNN (~824K parameters, dropout rate p=0.3) to generate calibrated confidence intervals for predictions, using repeated stochastic forward passes (T=10 to T=100) to estimate prediction uncertainty via conformal methods.</li>
+  <li>Validated the approach by testing across multiple confidence levels (80%–95% CIs), finding correctly classified samples produced consistently tight intervals (~0.02–0.04 width) while misclassified samples produced dramatically wider intervals (~0.5–0.75 width) — a ~20–28x separation that confirmed the method reliably flagged uncertain/incorrect predictions.</li>
+  <li>Applied this same Bayesian interval framework to evaluate the Parkinson’s detection model’s robustness under audio perturbations and noise, using prediction interval width as a signal for when the model’s outputs should be trusted versus flagged for review.</li>
+</ul>
 
-  </picture>
+<h4 id="training-infrastructure">Training Infrastructure</h4>
 
-</figure>
+<ul>
+  <li>Ran multi-GPU training on Vertex AI, distributing training across GPUs to handle the compute demands of fine-tuning the AST model at scale.</li>
+</ul>
 
-        <div class="card-body">
-          <h2 class="card-title text-lowercase">UNDERSTAND: Emotion-Regulation Data Pipeline for LLM Alignment</h2>
-          <p class="card-text">An AI system that recognizes emotional distress on social media and responds supportively.</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/2_project/">
-      <div class="card hoverable">
-<figure>
+<h4 id="tech-stack">Tech Stack</h4>
 
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/3-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/3-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/3-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/3.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-        <div class="card-body">
-          <h2 class="card-title text-lowercase">project 2</h2>
-          <p class="card-text">a project with a background image</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/myna-parkinsons-detection/">
-      <div class="card hoverable">
-<figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/myna-parkinsons-project-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/myna-parkinsons-project-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/myna-parkinsons-project-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/myna-parkinsons-project.jpeg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-        <div class="card-body">
-          <h2 class="card-title text-lowercase">Speech-Based Parkinson's Disease Detection</h2>
-          <p class="card-text">An AI system that detects early signs of Parkinson's disease from voice recordings.</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="https://unsplash.com" rel="external nofollow noopener" target="_blank">
-      <div class="card hoverable">
-<figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/7-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/7-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/7-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/7.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-        <div class="card-body">
-          <h2 class="card-title text-lowercase">project 3</h2>
-          <p class="card-text">a project that redirects to another website</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-  </div>
-  <h2 class="category">fun</h2>
-  <!-- Generate cards for each project -->
-  <div class="grid">
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/4_project/">
-      <div class="card hoverable">
-        <div class="card-body">
-          <h2 class="card-title text-lowercase">project 4</h2>
-          <p class="card-text">another without an image</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/5_project/">
-      <div class="card hoverable">
-<figure>
-
-  <picture>
-    
-    <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/1-480.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/1-800.webp"></source>
-    <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/1-1400.webp"></source>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/1.jpg" width="auto" height="auto" alt="project thumbnail" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-        <div class="card-body">
-          <h2 class="card-title text-lowercase">project 5</h2>
-          <p class="card-text">a project with a background image</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-<!-- _includes/projects.html -->
-<div class="grid-sizer"></div>
-<div class="grid-item">
-  <a href="/projects/6_project/">
-      <div class="card hoverable">
-        <div class="card-body">
-          <h2 class="card-title text-lowercase">project 6</h2>
-          <p class="card-text">a project with no image</p>
-          <div class="row ml-1 mr-1 p-0">
-          </div>
-        </div>
-      </div>
-    </a>
-</div>
-  </div>
-</div>
+<p>Python, PyTorch, Audio Spectrogram Transformer (AST), MFCC, OpenL3, Whisper, Monte Carlo Dropout, Conformal Prediction, Bayesian Inference, Vertex AI (multi-GPU)</p>
 
           </article>
 
