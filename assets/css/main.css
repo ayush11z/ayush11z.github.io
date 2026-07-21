@@ -484,7 +484,9 @@ footer.sticky-bottom {
   height: 100%;
   display: flex;
   flex-direction: column;
-  border: none;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 10px;
+  overflow: hidden;
   box-shadow: none;
 }
 .projects .card figure {
@@ -492,23 +494,23 @@ footer.sticky-bottom {
 }
 .projects .card img {
   width: 100%;
-  height: 220px;
+  height: 160px;
   object-fit: cover;
 }
 .projects .card .card-body {
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
-  padding: 1.5rem 0.25rem;
+  padding: 1.25rem;
 }
 .projects .card .card-title {
-  font-size: 1.5rem;
+  font-size: 1.15rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 .projects .card .card-text {
   color: var(--global-text-color-light);
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   line-height: 1.5;
 }
 .projects .card-item {
@@ -521,8 +523,18 @@ footer.sticky-bottom {
 }
 .projects .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 2.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 650px) {
+  .projects .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .projects .grid {
+    grid-template-columns: 1fr;
+  }
 }
 .projects .grid-sizer {
   display: none;
