@@ -67,20 +67,9 @@
   }
 }
 
-// Project detail page — banner image, shown at its natural size
-.project-banner {
-  max-width: 480px;
-  margin: var(--space-6) 0 var(--space-8) 0;
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--border-color);
-  background-color: var(--bg-card);
-
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 0;
+// Project detail page — wider text measure
+.project-page {
+  p, li {
+    max-width: 75ch;
   }
 }
