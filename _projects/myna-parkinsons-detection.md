@@ -33,6 +33,7 @@ This project was a research collaboration with Princeton PhD scholars at [Myna V
 - **Monte Carlo Dropout**: Built a **Monte Carlo Dropout** CNN (~824K parameters, dropout rate p=0.3) to generate calibrated confidence intervals for predictions, using repeated stochastic forward passes to estimate prediction uncertainty via **conformal** methods.
 - **Interval validation**: Validated the approach by testing across multiple confidence levels (80%–95% CIs), finding correctly classified samples produced consistently tight intervals (~0.02–0.04 width) while misclassified samples produced dramatically wider intervals (~0.5–0.75 width) — a **~20–28x** separation that confirmed the method reliably flagged uncertain/incorrect predictions.
 - **Robustness signal**: Applied this same **Bayesian** interval framework to evaluate the Parkinson's detection model's robustness under audio perturbations and noise, using prediction interval width as a signal for when the model's outputs should be trusted versus flagged for review.
+- **Continual learning**: Integrated **LoRA**-based continual learning so the model could adapt to new data while retaining **95.6%** of prior-task performance, avoiding catastrophic forgetting.
 
 ---
 
