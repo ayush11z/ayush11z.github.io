@@ -47,17 +47,20 @@ This project was built during my internship as an AI / Full Stack Development In
 
 ---
 
-#### 🚀 Deployment
+#### 🚀 Deployment (AWS)
 
-- **Containerization**: Containerized the application with **Docker** to ensure consistent deployment across development and production environments.
-- **Reproducibility**: Configured services for reproducible local development and simplified deployment workflows.
-- **End-to-end validation**: Verified the complete end-to-end pipeline, from document ingestion to answer generation, under realistic workloads.
+- **Containerization**: Containerized the FastAPI application with **Docker** to ensure consistent behavior across development and production environments.
+- **Compute**: Deployed containers to **AWS ECS with Fargate** for serverless container orchestration, with **EC2** used for auxiliary and development workloads.
+- **Load balancing**: Placed an **Application Load Balancer (ALB)** in front of the service to distribute traffic across tasks and support zero-downtime rolling deployments.
+- **Storage**: Used **S3** for storing raw documents and ingestion artifacts ahead of the embedding pipeline.
+- **Monitoring**: Set up **CloudWatch** dashboards, logs, and alarms to monitor latency, error rates, and resource utilization in production.
+- **End-to-end validation**: Verified the complete end-to-end pipeline, from document ingestion to answer generation, under realistic concurrent workloads on live infrastructure.
 
 ---
 
 #### 🛠️ Tech Stack
 
-Python, LangChain, sentence-transformers, MongoDB Vector Search, FastAPI, Docker
+Python, LangChain, sentence-transformers, MongoDB Vector Search, FastAPI, Docker, AWS (EC2, ECS/Fargate, S3, ALB, CloudWatch)
 
 ---
 
