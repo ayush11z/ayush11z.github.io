@@ -36,9 +36,10 @@ analytics:
 # STEP 4: Choose Your Pages (comment out any you don't need)
 # ============================================================
 nav_pages:
+  - name: experience
   - name: projects
   - name: publications
-  - name: cv
+  - name: photography
 
 # ============================================================
 # Advanced Settings (you probably don't need to change these)

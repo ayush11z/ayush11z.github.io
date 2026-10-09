@@ -1,0 +1,7 @@
+# Wildlife / nature photos shown on the Photography page.
+# Add one entry per photo. `img` is relative to the site root,
+# e.g. place files in images/photography/ and reference them here.
+#
+# - img: images/photography/osprey.jpg
+#   caption: "Osprey, Mission Bay"
+#   location: "San Diego, CA"
