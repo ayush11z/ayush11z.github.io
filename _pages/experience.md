@@ -70,7 +70,3 @@ permalink: /experience/
 </div>
 
 </div>
-
-<p style="margin-top: var(--space-8);">
-For the full breakdown including education, skills, and projects, <a href="{{ '/papers/Ayush_Urs_Resume.pdf' | relative_url }}">download my resume (PDF)</a>.
-</p>
