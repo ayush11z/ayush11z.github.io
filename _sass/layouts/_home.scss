@@ -38,8 +38,8 @@
 // Two-column split below the masthead: main content + "What's New" card
 .home-grid {
   display: grid;
-  grid-template-columns: 1fr 340px;
-  gap: var(--space-16);
+  grid-template-columns: 1fr 320px;
+  gap: 6rem;
   align-items: start;
 
   @media (max-width: 860px) {
@@ -59,23 +59,13 @@
 }
 
 .home-side {
-  .section-card {
+  .profile-card {
     position: sticky;
     top: calc(var(--space-16) + 2rem);
 
     @media (max-width: 860px) {
       position: static;
     }
-  }
-
-  h4 {
-    font-family: 'JetBrains Mono', 'Fira Code', monospace;
-    font-size: 0.6875rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-    margin-top: 0;
   }
 }
 

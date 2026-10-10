@@ -60,10 +60,9 @@ permalink: /
 {% endfor %}
 </ul>
 {% endif %}
-</div>
 
 {% if site.data.news and site.data.news.size > 0 %}
-<div class="section-card" style="margin-top: var(--space-6);">
+<div class="profile-news">
 <h4>What's New</h4>
 <div class="news-timeline">
 {% for article in site.data.news limit:5 %}
@@ -76,6 +75,7 @@ permalink: /
 <p style="margin-top: var(--space-4); margin-bottom: 0;"><a href="{{ site.url }}{{ site.baseurl }}/allnews.html">See all news &rarr;</a></p>
 </div>
 {% endif %}
+</div>
 
 </div>
 

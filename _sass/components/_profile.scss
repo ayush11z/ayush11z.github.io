@@ -28,8 +28,8 @@
   }
 
   .profile-photo {
-    width: 280px;
-    height: 280px;
+    width: 224px;
+    height: 224px;
     max-width: 100%;
     border-radius: 50%;
     object-fit: cover;
@@ -57,5 +57,23 @@
     font-size: 0.8125rem;
     color: var(--text-muted);
     margin-bottom: var(--space-1);
+  }
+
+  // "What's New" merged into the bottom of the same card
+  .profile-news {
+    text-align: left;
+    margin-top: var(--space-6);
+    padding-top: var(--space-6);
+    border-top: 1px solid var(--border-color);
+
+    h4 {
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      font-size: 0.6875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-top: 0;
+    }
   }
 }
