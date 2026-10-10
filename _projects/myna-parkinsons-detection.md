@@ -4,6 +4,8 @@ title: Speech-Based Parkinson's Disease Detection
 description: Using AI to detect early signs of Parkinson's disease from a person's voice.
 img: images/projects/myna-parkinsons-project.jpeg
 importance: 2
+category: Health
+stack: ["PyTorch", "SVM", "OpenL3", "Whisper"]
 ---
 
 Parkinson's disease often changes the way a person speaks years before other symptoms become obvious. This project explores whether AI models can pick up on those subtle vocal changes, working toward a low-cost, non-invasive way to flag Parkinson's risk from a simple voice recording — with a particular focus on making the models reliable across languages and real-world, noisy audio conditions rather than just clean lab recordings.

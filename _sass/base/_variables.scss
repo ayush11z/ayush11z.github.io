@@ -3,23 +3,23 @@
 // =============================================================
 
 :root {
-  // Accent — a warm scholarly teal
-  --accent: #1a7a6d;
-  --accent-hover: #15655a;
-  --accent-light: rgba(26, 122, 109, 0.08);
+  // Accent — deep pine green, editorial and confident
+  --accent: #2f5d3a;
+  --accent-hover: #234a2c;
+  --accent-light: rgba(47, 93, 58, 0.08);
 
-  // Light mode — warm parchment tones
-  --bg-primary: #f8f6f1;
-  --bg-secondary: #f0ece4;
-  --bg-card: #ffffff;
-  --text-primary: #2c2a25;
-  --text-secondary: #5c5850;
+  // Light mode — warm, newsprint-leaning parchment
+  --bg-primary: #f7f4ed;
+  --bg-secondary: #efe9dd;
+  --bg-card: #fffdf9;
+  --text-primary: #211f1a;
+  --text-secondary: #55524a;
   --text-muted: #8a857c;
-  --border-color: #e2ded6;
-  --shadow-sm: 0 1px 3px rgba(44, 42, 37, 0.06);
-  --shadow-md: 0 4px 12px rgba(44, 42, 37, 0.08);
-  --shadow-lg: 0 8px 24px rgba(44, 42, 37, 0.1);
-  --shadow-navbar: 0 1px 4px rgba(44, 42, 37, 0.1);
+  --border-color: #ddd6c7;
+  --shadow-sm: 0 1px 3px rgba(33, 31, 26, 0.06);
+  --shadow-md: 0 4px 12px rgba(33, 31, 26, 0.08);
+  --shadow-lg: 0 8px 24px rgba(33, 31, 26, 0.1);
+  --shadow-navbar: 0 1px 4px rgba(33, 31, 26, 0.1);
 
   // Layout
   --container-max: 1100px;
@@ -51,9 +51,9 @@
 
 // Dark mode — rich warm dark
 [data-bs-theme="dark"] {
-  --accent: #3dbaa8;
-  --accent-hover: #5dd4c2;
-  --accent-light: rgba(61, 186, 168, 0.1);
+  --accent: #5fae73;
+  --accent-hover: #7cc38e;
+  --accent-light: rgba(95, 174, 115, 0.12);
 
   --bg-primary: #1c1b18;
   --bg-secondary: #262520;

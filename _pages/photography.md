@@ -5,9 +5,12 @@ sitemap: false
 permalink: /photography/
 ---
 
-## Photography
+<div class="section-marker" markdown="0">
+<span class="eyebrow">01 &mdash; Off The Clock</span>
+</div>
 
-<p class="home-hero-sub" style="margin-top: -1rem;">Wildlife & nature, off the clock.</p>
+<h2 class="section-headline">Photography</h2>
+<p class="home-hero-sub" markdown="0" style="margin-top: calc(-1 * var(--space-4));">Wildlife &amp; nature, off the clock.</p>
 
 {% assign photos = site.data.photography %}
 {% if photos and photos.size > 0 %}

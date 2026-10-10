@@ -22,9 +22,10 @@ links:
 # ============================================================
 # STEP 3: Site Settings
 # ============================================================
-accent_color: "#1a7a6d"      # theme color for links and buttons
+accent_color: "#2f5d3a"      # theme color for links and buttons
 dark_mode: true              # show dark mode toggle in navbar
 description: "MSCS student at UC San Diego working on agentic AI systems and applied ML for health."
+dateline: "VOLUME I — FALL 2026"  # small mono label shown in the top nav bar
 baseurl: ""
 url: "https://ayush11z.github.io"
 

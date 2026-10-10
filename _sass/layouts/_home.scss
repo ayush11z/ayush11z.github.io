@@ -1,60 +1,49 @@
 // =============================================================
-// Home page — two-column grid, editorial feel
+// Home page — editorial masthead + numbered sections
 // =============================================================
 
-.home-grid {
-  display: grid;
-  grid-template-columns: 1fr 340px;
-  gap: var(--space-12);
-  align-items: start;
+.masthead {
+  text-align: center;
+  padding: var(--space-12) 0 var(--space-10);
+}
 
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: var(--space-8);
+.masthead-name {
+  font-family: 'Fraunces', 'Source Serif 4', Georgia, serif;
+  font-weight: 900;
+  font-size: 6rem;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.masthead-sub {
+  font-family: 'Fraunces', 'Source Serif 4', Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.375rem;
+  color: var(--text-secondary);
+  margin: var(--space-4) 0 0;
+}
+
+@media (max-width: 768px) {
+  .masthead-name {
+    font-size: 3.25rem;
+  }
+  .masthead-sub {
+    font-size: 1.125rem;
   }
 }
 
 .home-content {
   min-width: 0;
 
-  h3:first-child {
-    margin-top: 0;
-  }
-
-  // First paragraph — slightly larger, editorial lead-in
+  // Intro bio — slightly larger, editorial lead-in, drop cap applied
   > p:first-of-type {
-    font-size: 1.0625rem;
-    line-height: 1.8;
+    font-size: 1.125rem;
+    line-height: 1.85;
     color: var(--text-primary);
   }
-}
-
-// Hero heading — the person's name, large and prominent
-.home-hero {
-  font-family: 'Source Serif 4', Georgia, serif;
-  font-size: 2.75rem;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-  margin-top: 0;
-  margin-bottom: var(--space-1);
-  color: var(--text-primary);
-
-  &::after {
-    display: none;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 2rem;
-  }
-}
-
-.home-hero-sub {
-  font-size: 1.0625rem;
-  color: var(--text-muted);
-  margin-bottom: var(--space-8);
-  font-style: italic;
-  max-width: none;
 }
 
 // Banner image — editorial frame with caption
@@ -92,7 +81,7 @@
   margin-top: 0;
 
   .news-item {
-    padding: var(--space-3) 0;
+    padding: var(--space-4) 0;
     border-bottom: 1px solid var(--border-color);
 
     &:last-child {
@@ -101,18 +90,23 @@
   }
 
   .news-date {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
     font-size: 0.6875rem;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--text-muted);
     text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 0.06em;
   }
 
   .news-headline {
-    margin-top: var(--space-1);
+    margin-top: var(--space-2);
     color: var(--text-secondary);
-    font-size: 0.875rem;
-    line-height: 1.5;
+    font-size: 0.9375rem;
+    line-height: 1.6;
+
+    a {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
   }
 }

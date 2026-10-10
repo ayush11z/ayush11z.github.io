@@ -1,0 +1,225 @@
+// =============================================================
+// Editorial system — masthead, numbered sections, drop caps,
+// double rules, "read the story" buttons, inbox rows, filters.
+// =============================================================
+
+// Fixed light paper tone for text inside the always-dark contact
+// block — intentionally NOT var(--bg-primary), since that flips to
+// a dark value in dark mode and would vanish against this block.
+$contact-paper: #f7f4ed;
+
+// Small mono label used everywhere: datelines, section numbers,
+// metadata rows ("JUNE 2026 — NOW", "01 — INTRODUCTION").
+.eyebrow {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+// Two hairlines close together — a recurring structural motif.
+.double-rule {
+  height: 5px;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  margin: var(--space-6) 0;
+}
+
+// Numbered section header: "02 — EXPERIENCE" over a hairline,
+// used to open every major section on a page.
+.section-marker {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border-color);
+  margin: var(--space-16) 0 var(--space-6);
+
+  .eyebrow {
+    white-space: nowrap;
+  }
+}
+
+// Big italic serif section heading ("Who am I?", "A Working Résumé")
+.section-headline {
+  font-family: 'Fraunces', 'Source Serif 4', Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-6);
+
+  &::after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-headline {
+    font-size: 2.125rem;
+  }
+}
+
+// Drop cap — first letter of an intro paragraph set large & bold
+// in the accent color, classic editorial lead-in.
+.drop-cap {
+  &::first-letter {
+    font-family: 'Fraunces', 'Source Serif 4', Georgia, serif;
+    font-weight: 700;
+    font-size: 3.5em;
+    line-height: 0.8;
+    float: left;
+    margin: 0.05em 0.08em 0 0;
+    color: var(--accent);
+  }
+}
+
+// Pill button with trailing arrow — "Read the story"
+.btn-story {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-full);
+  padding: 0.5rem 1rem;
+  transition: all var(--transition-fast);
+  background-image: none !important;
+
+  .arrow {
+    transition: transform var(--transition-fast);
+  }
+
+  &:hover {
+    background-color: var(--accent);
+    color: var(--bg-card);
+
+    .arrow {
+      transform: translateX(3px);
+    }
+  }
+}
+
+// Filter tab row (project category switcher)
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-5) 0 var(--space-8);
+}
+
+.filter-tab {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.875rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  &.active {
+    background-color: var(--text-primary);
+    border-color: var(--text-primary);
+    color: var(--bg-primary);
+  }
+}
+
+// Dark "Let's Connect" contact block — flips the palette
+.contact-block {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+  border-radius: var(--radius-xl);
+  padding: var(--space-10) var(--space-8);
+  margin: var(--space-6) 0;
+
+  .section-headline {
+    color: $contact-paper;
+  }
+
+  .contact-sub {
+    color: rgba(247, 244, 237, 0.65);
+    font-size: 1rem;
+    max-width: 48ch;
+    margin-bottom: var(--space-8);
+  }
+}
+
+[data-bs-theme="dark"] .contact-block {
+  background-color: #000;
+}
+
+.inbox-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-5) 0;
+  border-bottom: 1px solid rgba(247, 244, 237, 0.14);
+  text-decoration: none;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .inbox-label {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(247, 244, 237, 0.5);
+    width: 6.5rem;
+    flex-shrink: 0;
+  }
+
+  .inbox-value {
+    font-family: 'Fraunces', 'Source Serif 4', Georgia, serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: $contact-paper;
+    flex: 1;
+  }
+
+  .inbox-arrow {
+    color: rgba(247, 244, 237, 0.4);
+    transition: transform var(--transition-fast), color var(--transition-fast);
+  }
+
+  &:hover {
+    .inbox-value {
+      color: var(--accent-hover, #7cc38e);
+    }
+    .inbox-arrow {
+      color: #7cc38e;
+      transform: translateX(4px);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .inbox-row {
+    flex-wrap: wrap;
+  }
+  .inbox-value {
+    font-size: 1.0625rem !important;
+  }
+}

@@ -3,14 +3,15 @@ layout: default
 ---
 
 <div class="fade-in-section project-page">
-  <p><a href="{{ site.url }}{{ site.baseurl }}/experience">&larr; All experience</a></p>
+  <p><a href="{{ site.url }}{{ site.baseurl }}/experience" class="eyebrow">&larr; All experience</a></p>
 
-  <div class="exp-meta">
+  <div class="exp-meta" style="margin-top: var(--space-6);">
     <span class="exp-date">{% if page.location %}{{ page.location }} &middot; {% endif %}{{ page.date_range }}</span>
     {% if page.highlight %}<span class="exp-highlight">{{ page.highlight }}</span>{% endif %}
   </div>
 
-  <h2 class="exp-title">{{ page.title }} <a href="{{ page.org_url }}" target="_blank" class="exp-org">@ {{ page.org }}</a></h2>
+  <h2 class="exp-title" style="margin-top: var(--space-3);">{{ page.title }}</h2>
+  <p class="exp-org-line"><a href="{{ page.org_url }}" target="_blank" class="exp-org">{{ page.org }}</a></p>
 
   {{ content }}
 

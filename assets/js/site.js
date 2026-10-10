@@ -65,6 +65,31 @@
     });
   }
 
+  // ----- Project Filter -----
+
+  var filterBar = document.getElementById('projectFilters');
+  var projectGrid = document.getElementById('projectGrid');
+
+  if (filterBar && projectGrid) {
+    var cards = projectGrid.querySelectorAll('[data-category]');
+
+    filterBar.addEventListener('click', function (e) {
+      var btn = e.target.closest('.filter-tab');
+      if (!btn) return;
+
+      filterBar.querySelectorAll('.filter-tab').forEach(function (t) {
+        t.classList.remove('active');
+      });
+      btn.classList.add('active');
+
+      var filter = btn.getAttribute('data-filter');
+      cards.forEach(function (card) {
+        var match = filter === 'all' || card.getAttribute('data-category') === filter;
+        card.classList.toggle('is-hidden', !match);
+      });
+    });
+  }
+
   // ----- Copy BibTeX Button -----
 
   document.querySelectorAll('.pub-collapse').forEach(function (collapse) {

@@ -8,6 +8,9 @@ date_range: "Aug 2025 – Apr 2026"
 highlight: "89% Accuracy"
 order: 4
 blurb: "Developed Parkinson's disease detection models from speech, reaching 89% accuracy with strong cross-linguistic generalization."
+highlights:
+  - "Developed Parkinson's detection models from speech using SVMs, CNNs, and Audio Spectrogram Transformers, reaching 89% accuracy."
+  - "Confirmed robustness with a 20–28x separation in confidence interval width; LoRA continual learning retained 95.6% of prior-task performance."
 stack: ["SVM", "CNN", "OpenL3", "Whisper"]
 ---
 
