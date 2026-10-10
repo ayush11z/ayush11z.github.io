@@ -60,7 +60,10 @@
   // Listing page: the whole title is one link. Stay static until hover,
   // then shift color + underline together so it reads as clickable.
   a.exp-title-link {
+    display: inline-block;
     color: inherit;
+    font-size: 1em;
+    transition: color var(--transition-fast), font-size var(--transition-fast);
 
     .exp-org {
       color: var(--accent);
@@ -68,6 +71,7 @@
 
     &:hover {
       color: var(--accent-hover);
+      font-size: 1.08em;
 
       .exp-org {
         color: var(--accent-hover);
