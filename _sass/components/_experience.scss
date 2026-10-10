@@ -57,18 +57,21 @@
     }
   }
 
-  // Listing page: the whole title is one link — underline it fully so
-  // it visibly reads as clickable, not just the org portion.
+  // Listing page: the whole title is one link. Stay static until hover,
+  // then shift color + underline together so it reads as clickable.
   a.exp-title-link {
     color: inherit;
-    background-size: 100% 1px;
 
     .exp-org {
       color: var(--accent);
     }
 
     &:hover {
-      color: inherit;
+      color: var(--accent-hover);
+
+      .exp-org {
+        color: var(--accent-hover);
+      }
     }
   }
 }
