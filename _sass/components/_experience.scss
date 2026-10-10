@@ -56,6 +56,21 @@
       color: var(--accent-hover);
     }
   }
+
+  // Listing page: the whole title is one link — underline it fully so
+  // it visibly reads as clickable, not just the org portion.
+  a.exp-title-link {
+    color: inherit;
+    background-size: 100% 1px;
+
+    .exp-org {
+      color: var(--accent);
+    }
+
+    &:hover {
+      color: inherit;
+    }
+  }
 }
 
 @media (max-width: 900px) {
