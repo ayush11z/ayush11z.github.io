@@ -12,6 +12,9 @@ permalink: /
 
 <div class="double-rule" markdown="0"></div>
 
+<div class="home-grid" markdown="0">
+<div class="home-main">
+
 <div class="section-marker" markdown="0">
 <span class="eyebrow">01 &mdash; Introduction</span>
 </div>
@@ -42,14 +45,13 @@ permalink: /
 {% if site.links.linkedin and site.links.linkedin != "" %}<a href="{{ site.links.linkedin }}" class="icon-link" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>{% endif %}
 </div>
 
-{% if site.data.news and site.data.news.size > 0 %}
-<div class="section-marker" markdown="0">
-<span class="eyebrow">02 &mdash; Lately</span>
 </div>
 
-<h2 class="section-headline">What's New</h2>
-
-<div class="news-timeline" markdown="0">
+{% if site.data.news and site.data.news.size > 0 %}
+<div class="home-side">
+<div class="section-card">
+<h4>What's New</h4>
+<div class="news-timeline">
 {% for article in site.data.news limit:5 %}
 <div class="news-item">
 <div class="news-date">{{ article.date }}</div>
@@ -57,4 +59,9 @@ permalink: /
 </div>
 {% endfor %}
 </div>
+<p style="margin-top: var(--space-4); margin-bottom: 0;"><a href="{{ site.url }}{{ site.baseurl }}/allnews.html">See all news &rarr;</a></p>
+</div>
+</div>
 {% endif %}
+
+</div>

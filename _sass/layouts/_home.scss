@@ -35,6 +35,50 @@
   }
 }
 
+// Two-column split below the masthead: main content + "What's New" card
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: var(--space-12);
+  align-items: start;
+
+  @media (max-width: 860px) {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}
+
+.home-main {
+  min-width: 0;
+
+  // First section marker sits right under the double-rule — no
+  // extra top margin needed on top of that.
+  > .section-marker:first-child {
+    margin-top: 0;
+  }
+}
+
+.home-side {
+  .section-card {
+    position: sticky;
+    top: calc(var(--space-16) + 2rem);
+
+    @media (max-width: 860px) {
+      position: static;
+    }
+  }
+
+  h4 {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-top: 0;
+  }
+}
+
 .icon-link-row {
   display: flex;
   flex-wrap: wrap;
