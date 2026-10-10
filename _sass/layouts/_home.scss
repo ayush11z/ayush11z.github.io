@@ -38,8 +38,8 @@
 // Two-column split below the masthead: main content + "What's New" card
 .home-grid {
   display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: var(--space-12);
+  grid-template-columns: 1fr 340px;
+  gap: var(--space-16);
   align-items: start;
 
   @media (max-width: 860px) {

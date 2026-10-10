@@ -47,9 +47,23 @@ permalink: /
 
 </div>
 
-{% if site.data.news and site.data.news.size > 0 %}
 <div class="home-side">
-<div class="section-card">
+
+<div class="profile-card" markdown="0">
+<img src="{{ site.url }}{{ site.baseurl }}/images/{{ site.photo }}" class="profile-photo" alt="{{ site.name }}" loading="lazy">
+<h4 class="profile-name">{{ site.name }}</h4>
+<p class="profile-institution">{{ site.institution }}</p>
+{% if site.data.pi[0].educationshort %}
+<ul style="text-align: left; margin-top: var(--space-4); list-style: none; padding-left: 0;">
+{% for education in site.data.pi[0].educationshort %}
+<li style="font-size: 0.875rem; color: var(--text-secondary); padding: var(--space-1) 0;">{{ education | replace: "-","&#8211;" }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+</div>
+
+{% if site.data.news and site.data.news.size > 0 %}
+<div class="section-card" style="margin-top: var(--space-6);">
 <h4>What's New</h4>
 <div class="news-timeline">
 {% for article in site.data.news limit:5 %}
@@ -61,7 +75,8 @@ permalink: /
 </div>
 <p style="margin-top: var(--space-4); margin-bottom: 0;"><a href="{{ site.url }}{{ site.baseurl }}/allnews.html">See all news &rarr;</a></p>
 </div>
-</div>
 {% endif %}
+
+</div>
 
 </div>
