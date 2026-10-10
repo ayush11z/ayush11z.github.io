@@ -1,12 +1,7 @@
 // =============================================================
 // Editorial system — masthead, numbered sections, drop caps,
-// double rules, "read the story" buttons, inbox rows, filters.
+// double rules, "read the story" buttons, filter tabs.
 // =============================================================
-
-// Fixed light paper tone for text inside the always-dark contact
-// block — intentionally NOT var(--bg-primary), since that flips to
-// a dark value in dark mode and would vanish against this block.
-$contact-paper: #f7f4ed;
 
 // Small mono label used everywhere: datelines, section numbers,
 // metadata rows ("JUNE 2026 — NOW", "01 — INTRODUCTION").
@@ -140,86 +135,5 @@ $contact-paper: #f7f4ed;
     background-color: var(--text-primary);
     border-color: var(--text-primary);
     color: var(--bg-primary);
-  }
-}
-
-// Dark "Let's Connect" contact block — flips the palette
-.contact-block {
-  background-color: var(--text-primary);
-  color: var(--bg-primary);
-  border-radius: var(--radius-xl);
-  padding: var(--space-10) var(--space-8);
-  margin: var(--space-6) 0;
-
-  .section-headline {
-    color: $contact-paper;
-  }
-
-  .contact-sub {
-    color: rgba(247, 244, 237, 0.65);
-    font-size: 1rem;
-    max-width: 48ch;
-    margin-bottom: var(--space-8);
-  }
-}
-
-[data-bs-theme="dark"] .contact-block {
-  background-color: #000;
-}
-
-.inbox-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-4);
-  padding: var(--space-5) 0;
-  border-bottom: 1px solid rgba(247, 244, 237, 0.14);
-  text-decoration: none;
-
-  &:last-child {
-    border-bottom: none;
-  }
-
-  .inbox-label {
-    font-family: 'JetBrains Mono', 'Fira Code', monospace;
-    font-size: 0.6875rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: rgba(247, 244, 237, 0.5);
-    width: 6.5rem;
-    flex-shrink: 0;
-  }
-
-  .inbox-value {
-    font-family: 'Fraunces', 'Source Serif 4', Georgia, serif;
-    font-style: italic;
-    font-weight: 500;
-    font-size: 1.25rem;
-    color: $contact-paper;
-    flex: 1;
-  }
-
-  .inbox-arrow {
-    color: rgba(247, 244, 237, 0.4);
-    transition: transform var(--transition-fast), color var(--transition-fast);
-  }
-
-  &:hover {
-    .inbox-value {
-      color: var(--accent-hover, #7cc38e);
-    }
-    .inbox-arrow {
-      color: #7cc38e;
-      transform: translateX(4px);
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  .inbox-row {
-    flex-wrap: wrap;
-  }
-  .inbox-value {
-    font-size: 1.0625rem !important;
   }
 }

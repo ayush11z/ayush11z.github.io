@@ -1,14 +1,15 @@
 // =============================================================
-// Footer — just the copyright line; the real footer content
-// lives in .contact-block (see components/editorial)
+// Footer — simple icon row + copyright, no card/block
 // =============================================================
 
 .site-footer {
-  padding: var(--space-8) 0 var(--space-10);
-  margin-top: var(--space-6);
+  border-top: 1px solid var(--border-color);
+  padding: var(--space-8) 0;
+  margin-top: var(--space-16);
+  text-align: center;
 
   .footer-copyright {
-    text-align: center;
+    margin-top: var(--space-5);
     color: var(--text-muted);
     font-family: 'JetBrains Mono', 'Fira Code', monospace;
     font-size: 0.6875rem;

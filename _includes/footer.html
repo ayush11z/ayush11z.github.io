@@ -1,46 +1,18 @@
-<div class="container" style="max-width: var(--container-max);">
-<div class="contact-block" markdown="0">
-<span class="eyebrow" style="color: rgba(247, 244, 237, 0.5);">Get In Touch</span>
-<h2 class="section-headline">Let's Connect</h2>
-<p class="contact-sub">Open to research collaborations, internships, and conversations about agentic AI, applied ML, and health-focused NLP.</p>
-
-{% if site.email %}
-<a href="mailto:{{ site.email }}" class="inbox-row">
-<span class="inbox-label">Email</span>
-<span class="inbox-value">{{ site.email }}</span>
-<span class="inbox-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-</a>
-{% endif %}
-
-{% if site.links.linkedin and site.links.linkedin != "" %}
-<a href="{{ site.links.linkedin }}" target="_blank" class="inbox-row">
-<span class="inbox-label">LinkedIn</span>
-<span class="inbox-value">{{ site.links.linkedin | remove: "https://www.linkedin.com/in/" | remove: "https://linkedin.com/in/" | remove: "https://www.linkedin.com/" | remove: "https://linkedin.com/" }}</span>
-<span class="inbox-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-</a>
-{% endif %}
-
-{% if site.links.github and site.links.github != "" %}
-<a href="{{ site.links.github }}" target="_blank" class="inbox-row">
-<span class="inbox-label">GitHub</span>
-<span class="inbox-value">{{ site.links.github | remove: "https://www.github.com/" | remove: "https://github.com/" }}</span>
-<span class="inbox-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-</a>
-{% endif %}
-
-{% if site.links.cv and site.links.cv != "" %}
-<a href="{{ site.url }}{{ site.baseurl }}/{{ site.links.cv }}" class="inbox-row">
-<span class="inbox-label">Resume</span>
-<span class="inbox-value">Download PDF</span>
-<span class="inbox-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-</a>
-{% endif %}
-</div>
-</div>
-
 <footer class="site-footer">
-  <div class="footer-copyright">
-    &copy; {{ "now" | date: "%Y" }} {{ site.name | escape }}
+  <div class="container" style="max-width: var(--container-max);">
+    <div class="icon-link-row" style="border-top: none; justify-content: center; margin-top: 0; padding-top: 0;" markdown="0">
+    {% if site.email %}<a href="mailto:{{ site.email }}" class="icon-link" title="Email"><i class="fa-solid fa-envelope"></i></a>{% endif %}
+    {% if site.links.cv and site.links.cv != "" %}<a href="{{ site.url }}{{ site.baseurl }}/{{ site.links.cv }}" class="icon-link" title="Resume"><i class="ai ai-cv"></i></a>{% endif %}
+    {% if site.links.google_scholar and site.links.google_scholar != "" %}<a href="{{ site.links.google_scholar }}" class="icon-link" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>{% endif %}
+    {% if site.links.github and site.links.github != "" %}<a href="{{ site.links.github }}" class="icon-link" title="GitHub"><i class="fa-brands fa-github"></i></a>{% endif %}
+    {% if site.links.researchgate and site.links.researchgate != "" %}<a href="{{ site.links.researchgate }}" class="icon-link" title="ResearchGate"><i class="ai ai-researchgate"></i></a>{% endif %}
+    {% if site.links.orcid and site.links.orcid != "" %}<a href="{{ site.links.orcid }}" class="icon-link" title="ORCID"><i class="ai ai-orcid"></i></a>{% endif %}
+    {% if site.links.twitter and site.links.twitter != "" %}<a href="{{ site.links.twitter }}" class="icon-link" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>{% endif %}
+    {% if site.links.linkedin and site.links.linkedin != "" %}<a href="{{ site.links.linkedin }}" class="icon-link" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>{% endif %}
+    </div>
+    <div class="footer-copyright">
+      &copy; {{ "now" | date: "%Y" }} {{ site.name | escape }}
+    </div>
   </div>
 </footer>
 
