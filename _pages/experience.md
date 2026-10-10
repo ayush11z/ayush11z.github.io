@@ -9,7 +9,7 @@ permalink: /experience/
 <span class="eyebrow">01 &mdash; My Work</span>
 </div>
 
-<h2 class="section-headline">A Working Résumé</h2>
+<h2 class="section-headline">Experiences</h2>
 <p class="home-hero-sub" markdown="0" style="margin-top: calc(-1 * var(--space-4)); margin-bottom: var(--space-8);">Research, internships, and everything in between.</p>
 
 <div class="exp-list" markdown="0">
