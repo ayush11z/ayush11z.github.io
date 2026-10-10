@@ -52,6 +52,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  experiences:
+    output: true
+    permalink: /experience/:path/
 
 sass:
   quiet_deps: true
