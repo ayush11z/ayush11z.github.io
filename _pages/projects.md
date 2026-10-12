@@ -44,7 +44,9 @@ permalink: /projects/
 <div class="modal-overlay" id="projectModalOverlay" markdown="0">
 <div class="modal-panel">
 <button class="modal-close" id="projectModalClose" aria-label="Close">&times;</button>
+<div class="modal-scroll" id="projectModalScroll">
 <div class="modal-body" id="projectModalBody"></div>
+</div>
 </div>
 </div>
 

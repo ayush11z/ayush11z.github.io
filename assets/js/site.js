@@ -95,12 +95,14 @@
   var modalOverlay = document.getElementById('projectModalOverlay');
   var modalBody = document.getElementById('projectModalBody');
   var modalClose = document.getElementById('projectModalClose');
+  var modalScroll = document.getElementById('projectModalScroll');
 
   if (modalOverlay && modalBody && modalClose) {
     var openModal = function (templateId) {
       var tpl = document.getElementById(templateId);
       if (!tpl) return;
       modalBody.innerHTML = tpl.innerHTML;
+      if (modalScroll) modalScroll.scrollTop = 0;
       modalOverlay.classList.add('open');
       document.body.classList.add('modal-open');
     };

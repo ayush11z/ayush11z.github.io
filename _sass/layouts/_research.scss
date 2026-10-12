@@ -134,7 +134,10 @@ body.modal-open {
   align-items: center;
   justify-content: center;
   padding: var(--space-6);
-  background-color: rgba(17, 16, 13, 0.6);
+  // A translucent film of the page's own background — not a dark
+  // tint — so the overlay reflects the current theme instead of
+  // forcing everything darker.
+  background-color: color-mix(in srgb, var(--bg-primary) 88%, transparent);
   opacity: 0;
   pointer-events: none;
   transition: opacity var(--transition-base);
@@ -145,23 +148,31 @@ body.modal-open {
   }
 }
 
+// .modal-panel itself does not scroll — only .modal-scroll inside it
+// does — so .modal-close stays fixed in place regardless of scroll
+// position, and never gets carried off-screen between project swaps.
 .modal-panel {
   position: relative;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 760px;
   max-height: 85vh;
-  overflow-y: auto;
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-lg);
-  padding: var(--space-10) var(--space-8);
   transform: translateY(16px) scale(0.98);
   transition: transform var(--transition-base);
 
   .modal-overlay.open & {
     transform: translateY(0) scale(1);
   }
+}
+
+.modal-scroll {
+  overflow-y: auto;
+  padding: var(--space-10) var(--space-8);
 }
 
 .modal-close {
@@ -216,7 +227,7 @@ body.modal-open {
 }
 
 @media (max-width: 600px) {
-  .modal-panel {
+  .modal-scroll {
     padding: var(--space-8) var(--space-5);
   }
 
