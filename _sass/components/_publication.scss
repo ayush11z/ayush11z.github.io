@@ -7,6 +7,13 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  // Override the global `li { max-width: 65ch }` prose rule — it was
+  // shrinking each <li> (and the divider line inside it) well short
+  // of the full container width.
+  li {
+    max-width: none;
+  }
 }
 
 .pub-list {
@@ -19,7 +26,7 @@
 
   .pub-title {
     font-family: 'Fraunces', 'Source Serif 4', Georgia, serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.5rem;
     line-height: 1.3;
     color: var(--text-primary);
