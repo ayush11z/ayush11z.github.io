@@ -90,6 +90,48 @@
     });
   }
 
+  // ----- Project Modal -----
+
+  var modalOverlay = document.getElementById('projectModalOverlay');
+  var modalBody = document.getElementById('projectModalBody');
+  var modalClose = document.getElementById('projectModalClose');
+
+  if (modalOverlay && modalBody && modalClose) {
+    var openModal = function (templateId) {
+      var tpl = document.getElementById(templateId);
+      if (!tpl) return;
+      modalBody.innerHTML = tpl.innerHTML;
+      modalOverlay.classList.add('open');
+      document.body.classList.add('modal-open');
+    };
+
+    var closeModal = function () {
+      modalOverlay.classList.remove('open');
+      document.body.classList.remove('modal-open');
+    };
+
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('[data-modal]');
+      if (link) {
+        // Allow opening in a new tab/window as normal.
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return;
+        e.preventDefault();
+        openModal(link.getAttribute('data-modal'));
+        return;
+      }
+
+      if (e.target === modalOverlay || e.target.closest('#projectModalClose')) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modalOverlay.classList.contains('open')) {
+        closeModal();
+      }
+    });
+  }
+
   // ----- Back to Top Button -----
 
   var topBtn = document.createElement('button');

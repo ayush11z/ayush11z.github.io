@@ -25,7 +25,7 @@ permalink: /projects/
 <div class="research-grid" markdown="0" id="projectGrid">
 {% for project in sorted_projects %}
 {% assign num = forloop.index | plus: 100 | to_string | slice: 1, 2 %}
-<a href="{{ project.url | relative_url }}" class="research-card-link" data-category="{{ project.category | slugify }}">
+<a href="{{ project.url | relative_url }}" class="research-card-link" data-category="{{ project.category | slugify }}" data-modal="project-{{ project.slug }}">
 <div class="research-card">
 <span class="research-num">{{ num }}</span>
 {% if project.category %}<span class="research-cat eyebrow">{{ project.category }}</span>{% endif %}
@@ -40,3 +40,28 @@ permalink: /projects/
 </a>
 {% endfor %}
 </div>
+
+<div class="modal-overlay" id="projectModalOverlay" markdown="0">
+<div class="modal-panel">
+<button class="modal-close" id="projectModalClose" aria-label="Close">&times;</button>
+<div class="modal-body" id="projectModalBody"></div>
+</div>
+</div>
+
+{% for project in sorted_projects %}
+<template id="project-{{ project.slug }}" markdown="0">
+<div class="modal-project">
+{% if project.category %}<span class="research-cat eyebrow">{{ project.category }}</span>{% endif %}
+<h2 class="modal-project-title">{{ project.title }}</h2>
+{% if project.stack %}
+<div class="exp-stack">
+{% for item in project.stack %}<span class="stack-chip">{{ item }}</span>{% endfor %}
+</div>
+{% endif %}
+<div class="modal-project-body project-page">
+{{ project.content }}
+</div>
+<a href="{{ project.url | relative_url }}" class="btn-story">View full page <span class="arrow">&rarr;</span></a>
+</div>
+</template>
+{% endfor %}

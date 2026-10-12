@@ -116,3 +116,111 @@
     max-width: 75ch;
   }
 }
+
+// =============================================================
+// Project modal — click a card, see it in an overlay instead of
+// navigating to a new page.
+// =============================================================
+
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+  background-color: rgba(17, 16, 13, 0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
+
+  &.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.modal-panel {
+  position: relative;
+  width: 100%;
+  max-width: 760px;
+  max-height: 85vh;
+  overflow-y: auto;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-10) var(--space-8);
+  transform: translateY(16px) scale(0.98);
+  transition: transform var(--transition-base);
+
+  .modal-overlay.open & {
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: var(--space-5);
+  right: var(--space-5);
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  z-index: 1;
+
+  &:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background-color: var(--accent-light);
+  }
+}
+
+.modal-project {
+  .research-cat {
+    display: block;
+    margin-bottom: var(--space-3);
+  }
+
+  .exp-stack {
+    margin: var(--space-5) 0;
+  }
+}
+
+.modal-project-title {
+  font-family: 'Fraunces', 'Source Serif 4', Georgia, serif;
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 1.25;
+  color: var(--text-primary);
+  margin: 0;
+
+  &::after {
+    display: none;
+  }
+}
+
+.modal-project-body {
+  margin-top: var(--space-6);
+}
+
+@media (max-width: 600px) {
+  .modal-panel {
+    padding: var(--space-8) var(--space-5);
+  }
+
+  .modal-project-title {
+    font-size: 1.5rem;
+  }
+}
