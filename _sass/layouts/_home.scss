@@ -35,6 +35,16 @@
   }
 }
 
+// Smaller than the other pages' section-headline — this one sits
+// right under the big masthead name, so it doesn't need to compete.
+.home-who-headline {
+  font-size: 2.25rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.75rem;
+  }
+}
+
 // Two-column split below the masthead: main content + "What's New" card
 .home-grid {
   display: grid;

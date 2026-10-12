@@ -19,7 +19,7 @@ permalink: /
 <span class="eyebrow">01 &mdash; Introduction</span>
 </div>
 
-<h2 class="section-headline">Who am I?</h2>
+<h2 class="section-headline home-who-headline">Who am I?</h2>
 
 <div class="home-content" markdown="0">
 <p class="drop-cap">I'm an incoming Master's student in Computer Science at UC San Diego, starting Fall 2026. My work sits at the intersection of agentic AI systems, applied machine learning, and health-focused NLP.</p>
