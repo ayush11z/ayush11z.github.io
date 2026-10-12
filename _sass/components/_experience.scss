@@ -3,12 +3,12 @@
 // =============================================================
 
 .exp-list {
-  border-top: 1px solid var(--border-color);
+  border-top: 2px solid color-mix(in srgb, var(--text-primary) 80%, transparent);
 }
 
 .exp-entry {
   padding: var(--space-10) 0;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 2px solid color-mix(in srgb, var(--text-primary) 80%, transparent);
 }
 
 .exp-entry-split {
@@ -119,14 +119,16 @@ a.exp-title-link {
 
 // Highlights rail — vertical accent rule + eyebrow + bullets
 .exp-highlights {
-  border-left: 2px solid var(--accent);
+  border-left: 3px solid var(--accent);
   padding-left: var(--space-5);
 
   .eyebrow {
     color: var(--accent);
     display: block;
-    margin-bottom: var(--space-3);
+    margin-bottom: var(--space-4);
     font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
   }
 
   ul {
@@ -138,10 +140,15 @@ a.exp-title-link {
   li {
     font-size: 1.0625rem;
     line-height: 1.6;
-    color: var(--text-secondary);
-    padding: var(--space-3) 0;
+    color: var(--text-primary);
+    padding: var(--space-4) 0;
     border-bottom: 1px dashed var(--border-color);
     max-width: none;
+
+    strong {
+      color: var(--accent);
+      font-weight: 700;
+    }
 
     &:last-child {
       border-bottom: none;
@@ -152,6 +159,10 @@ a.exp-title-link {
       padding-top: 0;
     }
   }
+}
+
+[data-bs-theme="dark"] .exp-highlights li strong {
+  color: var(--accent-hover);
 }
 
 @media (max-width: 860px) {

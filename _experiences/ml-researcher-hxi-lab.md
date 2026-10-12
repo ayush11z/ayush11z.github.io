@@ -9,8 +9,8 @@ highlight: "DPO on 4x A100"
 order: 3
 blurb: "Built pipelines to train LLMs toward regulated emotional responses with DPO on 4x A100 Nautilus clusters, preferred in 72% of human evaluations."
 highlights:
-  - "Built Reddit-based preference-pair pipelines across CERQ dimensions using Vertex AI, improving classification by 21 percentage points."
-  - "Fine-tuned transformer models on 100K+ samples with DPO on 4x A100 Nautilus clusters, preferred in 72% of human evaluations."
+  - "Built Reddit-based preference-pair pipelines across CERQ dimensions using Vertex AI, improving classification by <strong>21 percentage points</strong>."
+  - "Fine-tuned transformer models on <strong>100K+ samples</strong> with DPO on <strong>4x A100 Nautilus clusters</strong>, preferred in <strong>72% of human evaluations</strong>."
 stack: ["Vertex AI", "DPO", "LoRA", "Nautilus"]
 ---
 

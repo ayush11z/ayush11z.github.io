@@ -9,8 +9,8 @@ highlight: "7-Agent Pipeline"
 order: 1
 blurb: "Architected a 7-agent LangChain pipeline for automated simulation generation, cutting manual debugging time 38% and accelerating experimentation cycles 30%."
 highlights:
-  - "Architected a 7-agent LangChain pipeline decoupling literature parsing from execution, cutting debugging time 38% and speeding up experimentation 30%."
-  - "Added AST-based validation and CI/CD regression testing over a scoped MCP server, catching 63%+ of breaking changes before execution."
+  - "Architected a 7-agent LangChain pipeline decoupling literature parsing from execution, cutting debugging time <strong>38%</strong> and speeding up experimentation <strong>30%</strong>."
+  - "Added AST-based validation and CI/CD regression testing over a scoped MCP server, catching <strong>63%+ of breaking changes</strong> before execution."
 stack: ["LangChain", "MCP", "AST Validation", "CI/CD"]
 ---
 
