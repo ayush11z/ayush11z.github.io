@@ -11,8 +11,6 @@ permalink: /publications/
 
 <h2 class="section-headline">Publications</h2>
 
-<div class="section-card" id="pubList">
-<h3>Papers</h3>
-
+<div class="pub-list" id="pubList">
 {% bibliography --query @unpublished %}
 </div>
