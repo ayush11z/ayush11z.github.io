@@ -16,13 +16,33 @@
   }
 }
 
-.pub-list {
+// Full-bleed divider — breaks out of the max-width content column to
+// span the full browser viewport, not just the reading column.
+@mixin full-bleed-rule($side) {
+  content: '';
+  position: absolute;
+  #{$side}: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
   border-top: 1px solid var(--border-color);
 }
 
+.pub-list {
+  position: relative;
+
+  &::before {
+    @include full-bleed-rule(top);
+  }
+}
+
 .pub-entry {
+  position: relative;
   padding: var(--space-8) 0;
-  border-bottom: 1px solid var(--border-color);
+
+  &::after {
+    @include full-bleed-rule(bottom);
+  }
 
   .pub-title {
     font-family: 'Fraunces', 'Source Serif 4', Georgia, serif;
@@ -55,8 +75,8 @@
   }
 }
 
-li:last-child > .pub-entry {
-  border-bottom: none;
+li:last-child > .pub-entry::after {
+  display: none;
 }
 
 // Venue + year pill
