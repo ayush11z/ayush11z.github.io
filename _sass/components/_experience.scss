@@ -69,10 +69,10 @@ a.exp-title-link {
 }
 
 .exp-title {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 2.125rem;
+  font-family: 'Fraunces', 'Source Serif 4', Georgia, serif;
+  font-size: 2.5rem;
   font-weight: 800;
-  line-height: 1.2;
+  line-height: 1.15;
   letter-spacing: -0.01em;
   color: var(--text-primary);
   transition: color var(--transition-fast);
@@ -90,13 +90,13 @@ a.exp-title-link {
 
 @media (max-width: 900px) {
   .exp-title {
-    font-size: 1.875rem;
+    font-size: 2.125rem;
   }
 }
 
 @media (max-width: 600px) {
   .exp-title {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 }
 
