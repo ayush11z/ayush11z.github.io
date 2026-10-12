@@ -1,9 +1,18 @@
+@unpublished{yu2026sophia,
+  Author = {Yu, Sheldon and Yu, Tong and Jiang, Xunyi and Surana, Rohan and Mundada, Gagan and Urs, Ayush and Kim, Sungchul and Yao, Lina and McAuley, Julian and Wu, Junda},
+  Title = {Can We Break LLMs Out of Self-Loops? Fine-Grained Reasoning Control with Activation Steering},
+  year = {2026},
+  url = {https://openreview.net/forum?id=HGZ7MWRE2f},
+  abstract = {Extended reasoning is now standard for frontier Large Language Models (LLMs), yet the trajectories they produce remain largely uncontrolled, and inference-time methods for shaping them act mostly at the input or token level. We take a transition level view: treating each reasoning trace as a sequence of latent states, we show that failing traces tend to get stuck in self-loops that return the same state without progress. We then ask a narrow controllability question: can an inference-time activation intervention drive the model out of its current latent state on the next step? and answer it with Sophia: Steering Of reasoning Processes via Hidden-state Intervention and Activations. Training-free, Sophia extracts per source state a contrastive residual-stream direction that separates steps exiting the state from steps that stay, and applies it through an online self-loop detector. Across three models and four datasets, Sophia raises the loop exit rate over greedy decoding, and the effect is direction specific, norm-matched random offsets do not reproduce it and sign-flipping suppresses it. We establish latent reasoning states as a causally manipulable interface and self-loop exit as a concrete control primitive.},
+}
+
 @unpublished{urs2022brassica,
   Author = {Urs, Ayush},
   Title = {Building an AI-enhanced organic island with Brassica juncea seeds to counter eutrophication},
   year = {2022},
   month = {November},
   image = {brassica-organic-island.jpeg},
+  abstract = {Decontaminating water bodies has always been a problem in terms of developing and maintaining solutions. Our eutrophication solution is an organic island made of coconut husk (Cocos nucifera) and Indian Mustard (Brassica juncea) plants. It uses remediation techniques, such as phytoremediation and adsorption. Eutrophication primarily stems from human-induced causes such as poor sewage treatment and fertilizer overuse, which results in excess phosphate and nitrate ions accumulating in water bodies. This can have severe consequences, including algal bloom, and a reduction in aquaculture. Our investigation was done over a 21-day period, during which the concentration of phosphate ions was reduced, alleviating one factor that causes eutrophication. There were 3 tanks (A, B, and C): A contained the island and the plants, B contained only the island, and C was a control that contained neither. A Phosphate ion water testing kit was used to measure phosphate ion concentration in the sample contaminated water over a 21 day period. Each phosphate ion test produced a color of a different wavelength. Using a Vernier colorimeter, the percentage of transmittance was measured for each trial. Using the Beer-Lambert Law, the concentration values were obtained, which supported our hypothesis: A and B experienced a substantial increase in transmittance levels, whereas C experienced no change. The Pearson correlation test showed a positive correlation, hence phosphate ions were absorbed at a constant rate. Our solution also uses AI (Bellman equation) to analyze regions with the greatest phosphate ion concentration, where sensors and motors are present for maneuverability.},
 }
 
 @unpublished{urs2022trebuchet,
@@ -12,4 +21,5 @@
   year = {2022},
   month = {August},
   image = {trebuchet-euler-lagrange.jpeg},
+  abstract = {A Trebuchet is a non-holonomic system which is modelled after a catapult. Lagrangian mechanics was a formulation introduced by Professor Joseph Louis Lagrange which predicts the minimum path a body follows during its motion of travel. In this paper, I built a wooden trebuchet to experiment with its shooting range under different counterweight loads. The trebuchet model was customized by adding a sling to its swing arm which changes the dynamics of the setup as the sling essentially adds scope to the trebuchet's arm increasing its rotational energy. The paper compares readings based on several counterweight settings and uses the Euler-Lagrange equation to analyze the shooting ranges of the trebuchet. By considering the several frictional forces, we will derive the three equations of motion which will solely depend on the degrees of freedom of the system and will determine how efficient the Trebuchet is for a particular counterweight.},
 }
