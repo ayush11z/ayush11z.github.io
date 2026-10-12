@@ -3,12 +3,12 @@
 // =============================================================
 
 .exp-list {
-  border-top: 2px solid color-mix(in srgb, var(--text-primary) 80%, transparent);
+  border-top: 3px solid var(--text-primary);
 }
 
 .exp-entry {
   padding: var(--space-10) 0;
-  border-bottom: 2px solid color-mix(in srgb, var(--text-primary) 80%, transparent);
+  border-bottom: 3px solid var(--text-primary);
 }
 
 .exp-entry-split {
