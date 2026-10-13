@@ -11,7 +11,7 @@ blurb: "Architected a 7-agent LangChain pipeline for automated simulation genera
 highlights:
   - "Architected a 7-agent LangChain pipeline decoupling literature parsing from execution, cutting debugging time <strong>38%</strong> and speeding up experimentation <strong>30%</strong>."
   - "Added AST-based validation and CI/CD regression testing over a scoped MCP server, catching <strong>63%+ of breaking changes</strong> before execution."
-stack: ["LangChain", "MCP", "AST Validation", "CI/CD"]
+stack: ["LangChain", "MCP", "Agentic AI", "CI/CD"]
 ---
 
 I work with [Professor Dhananjay Bhaskar](https://engineering.wisc.edu/directory/profile/dhananjay-bhaskar/)'s lab at UW–Madison on turning biology research papers into runnable simulations automatically, without a researcher manually translating the paper by hand.
