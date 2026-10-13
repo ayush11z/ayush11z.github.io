@@ -170,11 +170,26 @@
   // ----- Fade-in on Scroll -----
 
   var fadeElements = document.querySelectorAll('.fade-in-section');
+
+  // A lingering `transform` (even translateY(0)) makes this element the
+  // containing block for any position:fixed descendants — e.g. the
+  // project modal — so once the fade-in finishes, drop the transform
+  // entirely instead of just animating it to zero.
+  var settleFade = function (el) {
+    el.classList.add('visible');
+    el.addEventListener('transitionend', function handler(e) {
+      if (e.propertyName === 'transform') {
+        el.style.transform = 'none';
+        el.removeEventListener('transitionend', handler);
+      }
+    });
+  };
+
   if (fadeElements.length > 0 && 'IntersectionObserver' in window) {
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+          settleFade(entry.target);
           observer.unobserve(entry.target);
         }
       });
@@ -187,9 +202,7 @@
       observer.observe(el);
     });
   } else {
-    fadeElements.forEach(function (el) {
-      el.classList.add('visible');
-    });
+    fadeElements.forEach(settleFade);
   }
 
   // ----- Site Search -----
