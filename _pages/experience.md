@@ -21,10 +21,10 @@ permalink: /experience/
 <span class="exp-date">{{ role.date_range }}</span>
 {% if role.highlight %}<span class="exp-highlight">{{ role.highlight }}</span>{% endif %}
 </div>
-<a href="{{ role.url | relative_url }}" class="exp-title-link">
+<div class="exp-title-block">
 <div class="exp-title">{{ role.title }}</div>
 <div class="exp-org-line">{{ role.org }}{% if role.location %} &mdash; {{ role.location }}{% endif %}</div>
-</a>
+</div>
 
 {% if role.stack %}
 <div class="exp-stack">

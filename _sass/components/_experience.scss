@@ -51,21 +51,8 @@
   padding: 0.3rem 0.625rem;
 }
 
-// Whole title block (role + org/location) is one link.
-a.exp-title-link {
-  display: inline-block;
-  color: inherit;
+.exp-title-block {
   margin-bottom: var(--space-5);
-  transition: font-size var(--transition-fast);
-
-  &:hover {
-    .exp-title {
-      color: var(--accent-hover);
-    }
-    .exp-org-line {
-      color: var(--accent-hover);
-    }
-  }
 }
 
 .exp-title {
