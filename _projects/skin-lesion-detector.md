@@ -5,7 +5,7 @@ description: Comparing model architectures to classify skin lesions and help cat
 img: images/projects/skin-lesion-detector.jpeg
 importance: 5
 category: Health
-stack: ["PyTorch", "YOLOv8", "Docker", "Kubernetes"]
+stack: ["PyTorch", "YOLOv8", "Docker", "Kubernetes", "EfficientNet", "ResNet", "OpenCV", "A100 GPUs"]
 summary: >-
   Catching skin cancer early often comes down to how reliably a model can classify a lesion from
   an image, so this project benchmarks several architectures head-to-head on that exact problem. I
