@@ -11,7 +11,7 @@ blurb: "Built a RAG pipeline to replace manual internal doc search, and deployed
 highlights:
   - "Built a RAG pipeline to replace manual internal doc search, using <strong>LangChain</strong> and <strong>sentence-transformers</strong>."
   - "Built the data layer with <strong>MongoDB Vector Search</strong> for embeddings and document storage, then containerized and deployed the service on <strong>AWS (ECS/Fargate)</strong>, maintaining <strong>100+ concurrent requests</strong> at <strong>p95 latency of 1–2 seconds</strong>."
-stack: ["LangChain", "MongoDB", "FastAPI", "AWS"]
+stack: ["LangChain", "FastAPI", "MongoDB", "AWS"]
 ---
 
 I interned as a Software Engineering Intern at [Hutech Solutions](https://hutechsolutions.com/) in Bangalore, building a Retrieval-Augmented Generation pipeline to replace manual internal documentation search with an AI assistant.
