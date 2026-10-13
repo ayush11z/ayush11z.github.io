@@ -2,7 +2,7 @@
 layout: project
 title: "Research Paper Agent"
 description: An AI research assistant that searches arXiv, OpenAlex, and Semantic Scholar from five angles at once, expands results via citation graphs, and flags gaps and contradictions in the literature.
-importance: 9
+importance: 11
 category: Research
 stack: ["LangChain", "Ollama", "Gemini", "Express.js"]
 github: https://github.com/ayush11z/research-paper-agent

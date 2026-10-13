@@ -2,7 +2,7 @@
 layout: project
 title: "Spotify Song Recommender"
 description: A song recommendation engine that clusters tracks by audio features like danceability and energy to surface similar songs from your own Spotify library.
-importance: 7
+importance: 9
 category: Software
 stack: ["Python", "scikit-learn", "Spotipy", "Pandas"]
 github: https://github.com/ayush11z/Spotify-song-recommender

@@ -2,7 +2,7 @@
 layout: project
 title: "Neurological Speech Biomarker Analyzer"
 description: A research tool that benchmarks speech-to-text accuracy on dysarthric speakers and predicts neurological speech-disorder severity directly from acoustic features of their voice.
-importance: 8
+importance: 10
 category: Health
 stack: ["Deepgram", "librosa", "scikit-learn", "Gradio"]
 github: https://github.com/ayush11z/Neurological-Speech-Biomarker-Analyzer

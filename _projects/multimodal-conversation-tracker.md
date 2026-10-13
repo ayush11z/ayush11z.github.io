@@ -2,7 +2,7 @@
 layout: project
 title: "Multimodal Conversation Tracker"
 description: A real-time system that tracks a multi-person conversation with a robot — who's talking, what they said, and who to address next — fusing speech diarization, transcription, and active-speaker vision.
-importance: 11
+importance: 8
 category: Research
 stack: ["pyannote.audio", "faster-whisper", "Deepgram", "WebSocket"]
 github: https://github.com/ayush11z/multimodal-conversation-tracker

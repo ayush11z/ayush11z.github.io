@@ -2,7 +2,7 @@
 layout: project
 title: "Professor Outreach Agent"
 description: An agentic tool that finds professors in a research area, drafts personalized cold emails with a team of CrewAI agents, sends them via Gmail, and tracks replies against your calendar.
-importance: 10
+importance: 12
 category: Software
 stack: ["CrewAI", "Flask", "Gmail API", "Supabase"]
 github: https://github.com/ayush11z/Meeting-prep-agent
