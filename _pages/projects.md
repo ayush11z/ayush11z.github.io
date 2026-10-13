@@ -25,8 +25,9 @@ permalink: /projects/
 <div class="research-grid" markdown="0" id="projectGrid">
 {% for project in sorted_projects %}
 {% assign num = forloop.index | plus: 100 | to_string | slice: 1, 2 %}
-<a href="{{ project.url | relative_url }}" class="research-card-link" data-category="{{ project.category | slugify }}" data-modal="project-{{ project.slug }}">
+<div class="research-card-link" data-category="{{ project.category | slugify }}">
 <div class="research-card">
+<a href="{{ project.url | relative_url }}" class="research-card-main" data-modal="project-{{ project.slug }}">
 <span class="research-num">{{ num }}</span>
 {% if project.category %}<span class="research-cat eyebrow">{{ project.category }}</span>{% endif %}
 <h4 class="research-title">{{ project.title }}</h4>
@@ -36,8 +37,12 @@ permalink: /projects/
 {% for item in project.stack %}<span>{{ item }}</span>{% unless forloop.last %}<span class="dot">&middot;</span>{% endunless %}{% endfor %}
 </div>
 {% endif %}
-</div>
 </a>
+{% if project.github %}
+<a href="{{ project.github }}" class="research-card-github" target="_blank" rel="noopener noreferrer">GitHub <span class="arrow">&rarr;</span></a>
+{% endif %}
+</div>
+</div>
 {% endfor %}
 </div>
 
@@ -76,6 +81,9 @@ permalink: /projects/
 {% if project.description %}<p class="modal-project-subtitle">{{ project.description }}</p>{% endif %}
 <hr class="modal-project-divider">
 <p class="modal-project-summary">{{ project.summary }}</p>
+{% if project.github %}
+<a href="{{ project.github }}" class="modal-project-github" target="_blank" rel="noopener noreferrer">View on GitHub <span class="arrow">&rarr;</span></a>
+{% endif %}
 </div>
 </div>
 </template>
