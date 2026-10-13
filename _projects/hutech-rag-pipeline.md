@@ -10,7 +10,7 @@ stack: ["LangChain", "FastAPI", "MongoDB", "AWS"]
 
 Manually searching through internal documentation to answer customer support queries is slow and inconsistent. This project builds a Retrieval-Augmented Generation (RAG) pipeline that lets a support assistant pull relevant information from internal docs automatically and generate accurate answers, instead of relying on manual search.
 
-This project was built during my internship as an AI / Full Stack Development Intern at [Hutech Solutions](https://hutechsolutions.com/).
+This project was built during my internship as a Software Engineering Intern at [Hutech Solutions](https://hutechsolutions.com/) in Bangalore, India.
 
 ---
 
