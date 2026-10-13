@@ -19,10 +19,8 @@ permalink: /
 <span class="eyebrow">01 &mdash; Introduction</span>
 </div>
 
-<h2 class="section-headline home-who-headline">Who am I?</h2>
-
 <div class="home-content" markdown="0">
-<p class="drop-cap">I'm an incoming Master's student in Computer Science at UC San Diego, starting Fall 2026. My work sits at the intersection of agentic AI systems, applied machine learning, and health-focused NLP.</p>
+<p>I'm a grad student in Computer Science at UC San Diego, starting Fall 2026. My work sits at the intersection of agentic AI systems, applied machine learning, and health-focused NLP.</p>
 
 <p>Right now, I'm working on agentic AI systems, exploring algorithm-discovery strategies for bio-simulation pipelines, and using preference optimization techniques like DPO and LoRA to study emotion regulation in language models. I've also worked on speech-based disease detection using audio transformers, built a classification pipeline with real GPU training infrastructure, and developed agentic systems that automate research and outreach workflows end-to-end.</p>
 </div>

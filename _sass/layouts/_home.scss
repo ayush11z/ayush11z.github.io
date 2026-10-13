@@ -35,16 +35,6 @@
   }
 }
 
-// Smaller than the other pages' section-headline — this one sits
-// right under the big masthead name, so it doesn't need to compete.
-.home-who-headline {
-  font-size: 2.25rem;
-
-  @media (max-width: 768px) {
-    font-size: 1.75rem;
-  }
-}
-
 // Two-column split below the masthead: main content + "What's New" card
 .home-grid {
   display: grid;
@@ -90,13 +80,6 @@
 
 .home-content {
   min-width: 0;
-
-  // Intro bio — slightly larger, editorial lead-in, drop cap applied
-  > p:first-of-type {
-    font-size: 1.125rem;
-    line-height: 1.85;
-    color: var(--text-primary);
-  }
 }
 
 // Banner image — editorial frame with caption
