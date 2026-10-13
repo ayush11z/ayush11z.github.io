@@ -14,18 +14,62 @@ highlights:
 stack: ["LangChain", "FastAPI", "MongoDB", "AWS"]
 ---
 
-I interned as a Software Engineering Intern at [Hutech Solutions](https://hutechsolutions.com/) in Bangalore, building a Retrieval-Augmented Generation pipeline to replace manual internal documentation search with an AI assistant.
+Manually searching through internal documentation to answer customer support queries is slow and inconsistent. I built a Retrieval-Augmented Generation (RAG) pipeline that lets a support assistant pull relevant information from internal docs automatically and generate accurate answers, instead of relying on manual search, during my internship as a Software Engineering Intern at [Hutech Solutions](https://hutechsolutions.com/) in Bangalore, India.
 
 ---
 
-#### 🔍 What I Worked On
+#### 🔎 Retrieval-Augmented Generation Pipeline
 
-- **RAG pipeline**: Built a Retrieval-Augmented Generation pipeline using LangChain and sentence-transformers to combine semantic document retrieval with LLM-based answer generation, replacing manual search through internal docs.
-- **Data layer**: Built the data layer with MongoDB Vector Search for embeddings and document storage, indexing internal documentation for fast semantic similarity search.
-- **Deployment**: Containerized and deployed the service on AWS (ECS/Fargate), maintaining 100+ concurrent requests at a p95 latency of 1–2 seconds in production.
+- **RAG pipeline**: Built a Retrieval-Augmented Generation (RAG) pipeline using **LangChain** to combine semantic document retrieval with LLM-based answer generation.
+- **Embeddings**: Generated dense vector embeddings for internal documentation using **sentence-transformers** and indexed them in **MongoDB Vector Search** for semantic similarity search.
+- **Chunking**: Implemented document chunking and embedding workflows to improve retrieval accuracy across large internal knowledge bases.
+- **Retrieval tuning**: Tuned retrieval parameters such as chunk size and the number of retrieved documents to improve answer quality while keeping inference latency low.
+
+---
+
+#### 🧩 Backend API Development
+
+- **REST APIs**: Developed REST APIs with **FastAPI** to expose document retrieval and question-answering endpoints.
+- **Modular services**: Structured the backend so retrieval, embedding generation, and response generation were modular services, making the pipeline easier to maintain and extend.
+- **Reliability**: Added request validation, error handling, and asynchronous processing to support multiple concurrent users.
+- **Integration**: Designed the API to integrate cleanly with frontend applications and internal services.
+
+---
+
+#### 🗄️ Data & Storage
+
+- **Vector storage**: Used **MongoDB Vector Search** for semantic document retrieval and storage of document embeddings alongside metadata.
+- **Ingestion pipelines**: Built ingestion pipelines to preprocess documents, generate embeddings, and keep the vector index synchronized with updated documentation.
+- **Metadata organization**: Organized document metadata to improve filtering and retrieval efficiency.
+
+---
+
+#### 📈 Evaluation & Performance
+
+- **Answer quality**: Evaluated retrieval and answer quality across more than **1,000** internal support queries, achieving approximately **75%** answer relevance.
+- **Configuration comparison**: Compared retrieval configurations and embedding strategies to identify settings that produced the most useful responses.
+- **Load testing**: Measured response latency and throughput under concurrent workloads to validate production readiness.
+- **Performance**: Optimized API performance to maintain **p95 response times of 1–2 seconds** while serving over **100 concurrent requests**.
+
+---
+
+#### 🚀 Deployment (AWS)
+
+- **Containerization**: Containerized the FastAPI application with **Docker** to ensure consistent behavior across development and production environments.
+- **Compute**: Deployed containers to **AWS ECS with Fargate** for serverless container orchestration, with **EC2** used for auxiliary and development workloads.
+- **Load balancing**: Placed an **Application Load Balancer (ALB)** in front of the service to distribute traffic across tasks and support zero-downtime rolling deployments.
+- **Storage**: Used **S3** for storing raw documents and ingestion artifacts ahead of the embedding pipeline.
+- **Monitoring**: Set up **CloudWatch** dashboards, logs, and alarms to monitor latency, error rates, and resource utilization in production.
+- **End-to-end validation**: Verified the complete end-to-end pipeline, from document ingestion to answer generation, under realistic concurrent workloads on live infrastructure.
+
+---
+
+#### 🛠️ Tech Stack
+
+Python, LangChain, sentence-transformers, MongoDB Vector Search, FastAPI, Docker, AWS (EC2, ECS/Fargate, S3, ALB, CloudWatch)
 
 ---
 
 #### 💡 Why It's Relevant
 
-Internal doc search is a small-scale version of a problem every growing team eventually runs into: knowledge buried in docs nobody can find fast enough. Building this end-to-end — from retrieval and embeddings to a deployed, concurrent-load-tested service — was my first time taking a RAG system past the prototype stage into something that had to hold up under real usage.
+Customer support is one of the clearest real-world use cases for RAG: users need fast, accurate answers pulled from a large body of internal knowledge, not generic responses. This internship gave me hands-on experience with the full pipeline, from retrieval quality and chunking strategy to deployment under real concurrent load, which is directly relevant to my interest in building AI systems that hold up under real usage, not just in a demo.
