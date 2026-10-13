@@ -4,7 +4,7 @@ title: "Neurological Speech Biomarker Analyzer"
 description: A research tool that benchmarks speech-to-text accuracy on dysarthric speakers and predicts neurological speech-disorder severity directly from acoustic features of their voice.
 importance: 10
 category: Health
-stack: ["Python", "Deepgram", "librosa", "scikit-learn", "Gradio", "jiwer"]
+stack: ["Voice AI", "Python", "Deepgram", "librosa", "scikit-learn", "Gradio", "jiwer"]
 github: https://github.com/ayush11z/Neurological-Speech-Biomarker-Analyzer
 summary: >-
   Off-the-shelf speech-to-text systems quietly fail the people who could benefit from them most,

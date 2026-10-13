@@ -4,7 +4,7 @@ title: "Multimodal Conversation Tracker"
 description: A real-time system that tracks a multi-person conversation with a robot — who's talking, what they said, and who to address next — fusing speech diarization, transcription, and active-speaker vision.
 importance: 8
 category: Research
-stack: ["pyannote.audio", "faster-whisper", "Deepgram", "PyTorch", "SpeechBrain", "WebSocket"]
+stack: ["Voice AI", "Computer Vision", "pyannote.audio", "faster-whisper", "Deepgram", "PyTorch", "SpeechBrain", "WebSocket"]
 github: https://github.com/ayush11z/multimodal-conversation-tracker
 summary: >-
   A robot that wants to join a group conversation first needs to know who's talking, what they

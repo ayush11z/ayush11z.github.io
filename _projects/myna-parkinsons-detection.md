@@ -5,7 +5,7 @@ description: Using AI to detect early signs of Parkinson's disease from a person
 img: images/projects/myna-parkinsons-project.jpeg
 importance: 2
 category: Health
-stack: ["PyTorch", "SVM", "CNN", "Transformers"]
+stack: ["Voice AI", "PyTorch", "SVM", "CNN", "Transformers"]
 summary: >-
   Parkinson's disease changes the way people speak years before other symptoms appear, so this
   project explores whether a model can pick up on those subtle vocal shifts from a simple
