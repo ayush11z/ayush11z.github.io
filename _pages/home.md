@@ -23,6 +23,8 @@ permalink: /
 <p>I'm a grad student in Computer Science at UC San Diego, starting Fall 2026. My work sits at the intersection of agentic AI systems, applied machine learning, and health-focused NLP.</p>
 
 <p>Right now, I'm working on agentic AI systems, exploring algorithm-discovery strategies for bio-simulation pipelines, and using preference optimization techniques like DPO and LoRA to study emotion regulation in language models. I've also worked on speech-based disease detection using audio transformers, built a classification pipeline with real GPU training infrastructure, and developed agentic systems that automate research and outreach workflows end-to-end.</p>
+
+<p>Lately I've been especially fascinated by voice AI, and I've been exploring state space models (SSMs) as an alternative to transformers for modeling long audio sequences.</p>
 </div>
 
 <div class="chip-container" markdown="0">
