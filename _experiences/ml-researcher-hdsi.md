@@ -5,7 +5,7 @@ org: "Halıcıoğlu Data Science Institute"
 org_url: "https://datascience.ucsd.edu/"
 location: "San Diego, CA"
 date_range: "Mar – Jun 2026"
-highlight: "31% Fewer LLM Calls"
+highlight: "Evolutionary Algorithms"
 order: 2
 blurb: "Designed a bandit-based selection strategy for LLM-driven algorithm discovery, achieving 31% fewer LLM calls and 24% faster convergence across 200+ optimization tasks."
 highlights:

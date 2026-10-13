@@ -5,7 +5,7 @@ org: "University of Wisconsin–Madison"
 org_url: "https://engineering.wisc.edu/directory/profile/dhananjay-bhaskar/"
 location: "Remote"
 date_range: "June 2026 – now"
-highlight: "7-Agent Pipeline"
+highlight: "Biophysics Simulations"
 order: 1
 blurb: "Architected a 7-agent LangChain pipeline for automated simulation generation, cutting manual debugging time 38% and accelerating experimentation cycles 30%."
 highlights:

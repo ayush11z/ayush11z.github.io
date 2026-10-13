@@ -5,7 +5,7 @@ org: "Myna Voice Labs"
 org_url: "https://mynalabs.ai/"
 location: "New York, NY (Hybrid)"
 date_range: "Aug 2025 – Apr 2026"
-highlight: "89% Accuracy"
+highlight: "Detecting Parkinsons"
 order: 4
 blurb: "Developed Parkinson's disease detection models from speech, reaching 89% accuracy with strong cross-linguistic generalization."
 highlights:

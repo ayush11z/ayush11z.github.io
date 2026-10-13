@@ -5,7 +5,7 @@ org: "Human-centered eXtended Intelligence Lab"
 org_url: "https://hxi.ucsd.edu/"
 location: "San Diego, CA"
 date_range: "Sep 2025 – now"
-highlight: "DPO on 4x A100"
+highlight: "Emotion Regulation"
 order: 3
 blurb: "Built pipelines to train LLMs toward regulated emotional responses with DPO on 4x A100 Nautilus clusters, preferred in 72% of human evaluations."
 highlights:
