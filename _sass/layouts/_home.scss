@@ -80,6 +80,13 @@
 
 .home-content {
   min-width: 0;
+
+  // Both paragraphs share the same editorial lead-in treatment.
+  p {
+    font-size: 1.125rem;
+    line-height: 1.85;
+    color: var(--text-primary);
+  }
 }
 
 // Banner image — editorial frame with caption
