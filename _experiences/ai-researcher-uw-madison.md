@@ -14,18 +14,27 @@ highlights:
 stack: ["LangChain", "MCP", "Agentic AI", "CI/CD"]
 ---
 
-I work with [Professor Dhananjay Bhaskar](https://engineering.wisc.edu/directory/profile/dhananjay-bhaskar/)'s lab at UW–Madison on turning biology research papers into runnable simulations automatically, without a researcher manually translating the paper by hand.
+Turning a biology research paper into a working computational simulation usually takes a researcher days of manual work — reading the paper, extracting the right parameters, and hand coding the model. This work builds a multi-agent AI pipeline that automates that translation, converting biology papers directly into parameterized simulations.
+
+This is a research collaboration with [Professor Dhananjay Bhaskar](https://engineering.wisc.edu/directory/profile/dhananjay-bhaskar/) and PhD student [Levi Svaren](https://biophysics.wisc.edu/staff/svaren-levi/) at the University of Wisconsin, Madison. Code is available on [GitHub](https://github.com/UW-Madison-CBML/paper_agenticAI).
 
 ---
 
 #### 🔍 What I Worked On
 
-- **7-agent pipeline**: Architected a multi-agent LangChain pipeline that decouples literature parsing from simulation execution, cutting manual debugging time **38%** and accelerating experimentation cycles **30%**.
-- **Scoped tool access**: Standardized how agents access external tools through a scoped MCP server, so each agent only sees the tools relevant to its step.
-- **Validation & CI/CD**: Added AST-based validation and CI/CD regression testing on top of the pipeline, cutting integration overhead **41%**, reducing failed runs **35%**, and catching **63%+ of breaking changes** before execution.
+- **Multi-agent pipeline**: Contributed to a multi-agent pipeline built with **LangChain** that reads biology papers and translates them into parameterized **PhysiCell**/**Morpheus** simulations using the **Hybrid Automata Library (HAL)**.
+- **Self-correction loop**: Designed a cyclical self-correction feedback loop that feeds the pipeline's final output back through itself for validation, catching errors before a simulation is finalized.
+- **Parameter retrieval**: Built a **LangChain**-based web search agent to automatically pull missing simulation parameters from external sources like **NCBI**, when a paper didn't specify every value needed.
+- **Tracing & debugging**: Used **LangSmith** to trace and debug agent runs across the pipeline, making it easier to pinpoint where a translation failed across the multi-step Librarian-to-Runner flow.
+
+---
+
+#### 🛠️ Tech Stack
+
+Python, LangChain, LangSmith, PhysiCell, Morpheus, Hybrid Automata Library (HAL), NCBI API
 
 ---
 
 #### 💡 Why It's Relevant
 
-Research pipelines that chain multiple AI agents together tend to fail silently — a bad intermediate output quietly corrupts everything downstream. This work is about making that failure mode visible early, through validation and regression testing, rather than discovering it after a simulation has already run for hours.
+Computational biology research is often bottlenecked by the manual work of translating literature into runnable models — this project treats that translation step itself as an AI problem, with self-correction and automated parameter retrieval reducing the amount of manual babysitting needed. It's directly relevant to my interest in building agentic systems that can reason reliably over multi-step, knowledge-intensive tasks.
