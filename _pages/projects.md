@@ -9,7 +9,7 @@ permalink: /projects/
 <span class="eyebrow">01 &mdash; My Catalog</span>
 </div>
 
-<h2 class="section-headline">Selected Works</h2>
+<h2 class="section-headline">Projects</h2>
 <p class="home-hero-sub" markdown="0" style="margin-top: calc(-1 * var(--space-4)); margin-bottom: var(--space-2);">Filter by area.</p>
 
 {% assign sorted_projects = site.projects | sort: "importance" %}
