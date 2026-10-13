@@ -11,7 +11,7 @@ blurb: "Designed a bandit-based selection strategy for LLM-driven algorithm disc
 highlights:
   - "Designed a bandit-based selection strategy with divide-and-conquer decomposition, <strong>beating SkyDiscover, EoH, and FunSearch</strong> on compute efficiency."
   - "Evaluated across <strong>200+ optimization tasks</strong>: <strong>31% fewer LLM calls</strong>, <strong>24% faster convergence</strong>, orchestrated over a SQLite strategy database."
-stack: ["Python", "SQLite"]
+stack: ["Python", "SQLite", "LLM"]
 ---
 
 At HDSI I worked on LLM-driven algorithm discovery — using an LLM to search over a space of candidate algorithms rather than hand-designing one. The open problem was allocating limited compute across many candidate solutions efficiently.
