@@ -1,11 +1,20 @@
 ---
 layout: project
 title: "Customer Support Assistant: RAG Pipeline for Internal Query Answering"
-description: An AI assistant that answers customer support questions using internal company documentation.
+description: An AI assistant that answers customer support questions using internal company documentation, deployed on AWS to handle real concurrent production traffic.
 img: images/projects/hutech-rag-pipeline.jpeg
 importance: 6
 category: Systems
 stack: ["LangChain", "FastAPI", "MongoDB", "AWS"]
+summary: >-
+  Manually searching internal documentation to answer customer support questions is slow and
+  inconsistent, so I built a Retrieval-Augmented Generation pipeline to replace it. Using LangChain
+  and sentence-transformers, the system embeds internal docs into MongoDB Vector Search for
+  semantic retrieval, exposed through modular FastAPI endpoints for retrieval, embedding
+  generation, and answer generation. I containerized the service with Docker and deployed it on
+  AWS ECS with Fargate behind an Application Load Balancer, with CloudWatch monitoring latency and
+  errors in production. Evaluated across 1,000+ internal queries at roughly 75% answer relevance,
+  the pipeline sustained 100+ concurrent requests at a p95 latency of 1–2 seconds.
 ---
 
 Manually searching through internal documentation to answer customer support queries is slow and inconsistent. This project builds a Retrieval-Augmented Generation (RAG) pipeline that lets a support assistant pull relevant information from internal docs automatically and generate accurate answers, instead of relying on manual search.

@@ -156,7 +156,7 @@ body.modal-open {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 760px;
+  max-width: 880px;
   max-height: 85vh;
   background-color: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -199,14 +199,59 @@ body.modal-open {
 }
 
 .modal-project {
-  .research-cat {
-    display: block;
-    margin-bottom: var(--space-3);
-  }
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: var(--space-8);
+}
 
-  .exp-stack {
-    margin: var(--space-5) 0;
+.modal-project-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.modal-project-num {
+  display: block;
+  font-family: 'Fraunces', 'Source Serif 4', Georgia, serif;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.modal-project-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+
+  .eyebrow {
+    display: block;
   }
+}
+
+.modal-project-field-value {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.modal-project-stacklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+
+  li {
+    font-family: 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.8125rem;
+    color: var(--accent);
+  }
+}
+
+.modal-project-main {
+  min-width: 0;
 }
 
 .modal-project-title {
@@ -222,8 +267,39 @@ body.modal-open {
   }
 }
 
-.modal-project-body {
-  margin-top: var(--space-6);
+.modal-project-subtitle {
+  font-family: 'Fraunces', 'Source Serif 4', Georgia, serif;
+  font-style: italic;
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  margin: var(--space-3) 0 0;
+}
+
+.modal-project-divider {
+  margin: var(--space-6) 0;
+  border: none;
+  border-top: 1px solid var(--border-color);
+}
+
+.modal-project-summary {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .modal-project {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  .modal-project-sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-6);
+  }
 }
 
 @media (max-width: 600px) {

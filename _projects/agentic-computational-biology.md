@@ -1,11 +1,20 @@
 ---
 layout: project
 title: "Agentic AI for Computational Biology"
-description: An AI pipeline that turns biology research papers into working simulations.
+description: An AI pipeline that turns biology research papers into working simulations, using multi-agent coordination and a self-correction loop to catch errors automatically.
 img: images/projects/agentic-computational-biology.jpeg
 importance: 4
 category: Research
 stack: ["Python", "LangChain", "LangSmith", "PhysiCell"]
+summary: >-
+  Turning a biology paper into a working simulation usually takes a researcher days of manual work
+  — reading the methods, extracting parameters, and hand-coding the model. I contributed to a
+  multi-agent LangChain pipeline that automates that translation directly into parameterized
+  PhysiCell and Morpheus simulations, including a self-correction loop that feeds the pipeline's
+  output back through itself to catch errors before a run is finalized. When a paper didn't
+  specify every parameter, a LangChain-based web search agent pulled the missing values from
+  sources like NCBI, and I used LangSmith to trace and debug agent runs across the multi-step
+  Librarian-to-Runner flow.
 ---
 
 Turning a biology research paper into a working computational simulation usually takes a researcher days of manual work — reading the paper, extracting the right parameters, and hand coding the model. This project builds a multi-agent AI pipeline that automates that translation, converting biology papers directly into parameterized simulations.

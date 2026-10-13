@@ -1,11 +1,20 @@
 ---
 layout: project
 title: "LLM-Driven Algorithm Discovery"
-description: Using LLMs to automatically discover and improve algorithms for optimization problems.
+description: Using LLMs to automatically discover and improve algorithms for optimization problems, guided by a bandit-based strategy that allocates compute toward the best candidates.
 img: images/projects/bandit-algorithm-discovery.jpeg
 importance: 3
 category: Research
 stack: ["Python", "SQLite", "VizTracer", "Local LLMs"]
+summary: >-
+  Most algorithm-discovery systems treat search strategy as an afterthought bolted onto whichever
+  LLM is available. I built a bandit-based alternative instead: a UCB strategy that guides an
+  LLM's search toward the most promising candidate algorithms, paired with a divide-and-conquer
+  decomposition that breaks optimization problems into smaller pieces the model can reason over
+  independently. Benchmarked against SkyDiscover and ShinkaEvolve across 200+ optimization tasks —
+  including beating SkyDiscover outright on circle packing and the traveling salesman problem —
+  the approach cut LLM calls by 31% and sped up convergence by 24%, with fitness-scored candidates
+  tracked in a SQLite strategy database and profiled in real time with VizTracer.
 ---
 
 An AI system that automatically discovers algorithms is only as good as the search strategy behind it. This project builds a new **bandit-based** approach to LLM-driven algorithm discovery, benchmarked against existing frameworks like [**SkyDiscover**](https://github.com/skydiscover-ai/skydiscover) on classic optimization problems.

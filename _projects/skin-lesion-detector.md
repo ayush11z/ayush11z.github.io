@@ -1,11 +1,20 @@
 ---
 layout: project
 title: "Skin Lesion Detector"
-description: Comparing model architectures to classify skin lesions and help catch skin cancer earlier
+description: Comparing model architectures to classify skin lesions and help catch skin cancer earlier, benchmarked on real clinical image data for diagnostic accuracy.
 img: images/projects/skin-lesion-detector.jpeg
 importance: 5
 category: Health
 stack: ["PyTorch", "YOLOv8", "Docker", "Kubernetes"]
+summary: >-
+  Catching skin cancer early often comes down to how reliably a model can classify a lesion from
+  an image, so this project benchmarks several architectures head-to-head on that exact problem. I
+  contributed to an end-to-end classification pipeline on the HAM10000 dataset, comparing a custom
+  CNN against EfficientNet-B0, ResNet18, and YOLOv8s, with the custom CNN reaching 81.75% top-1
+  accuracy. Alongside the modeling work, I built out the GPU training infrastructure itself —
+  Docker and Kubernetes running on A100 nodes with support for multi-GPU training, persistent
+  checkpoint storage, and interactive debugging pods — so experiments could scale without
+  babysitting the cluster by hand.
 ---
 
 Early detection is one of the biggest levers we have against skin cancer, and a lot of that detection ultimately depends on how well a model can tell dermoscopic images apart. This project started as a simple question: could we build a solid CNN classifier for skin lesions from scratch? It grew into something much bigger — a full comparison of model architectures backed by real training infrastructure, rather than a single notebook experiment.

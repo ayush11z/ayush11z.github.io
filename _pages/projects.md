@@ -51,19 +51,32 @@ permalink: /projects/
 </div>
 
 {% for project in sorted_projects %}
+{% assign num = forloop.index | plus: 100 | to_string | slice: 1, 2 %}
 <template id="project-{{ project.slug }}" markdown="0">
 <div class="modal-project">
-{% if project.category %}<span class="research-cat eyebrow">{{ project.category }}</span>{% endif %}
-<h2 class="modal-project-title">{{ project.title }}</h2>
-{% if project.stack %}
-<div class="exp-stack">
-{% for item in project.stack %}<span class="stack-chip">{{ item }}</span>{% endfor %}
+<div class="modal-project-sidebar">
+<span class="modal-project-num">{{ num }}</span>
+{% if project.category %}
+<div class="modal-project-field">
+<span class="eyebrow">Domain</span>
+<span class="modal-project-field-value">{{ project.category }}</span>
 </div>
 {% endif %}
-<div class="modal-project-body project-page">
-{{ project.content }}
+{% if project.stack %}
+<div class="modal-project-field">
+<span class="eyebrow">Stack</span>
+<ul class="modal-project-stacklist">
+{% for item in project.stack %}<li>{{ item }}</li>{% endfor %}
+</ul>
 </div>
-<a href="{{ project.url | relative_url }}" class="btn-story">View full page <span class="arrow">&rarr;</span></a>
+{% endif %}
+</div>
+<div class="modal-project-main">
+<h2 class="modal-project-title">{{ project.title }}</h2>
+{% if project.description %}<p class="modal-project-subtitle">{{ project.description }}</p>{% endif %}
+<hr class="modal-project-divider">
+<p class="modal-project-summary">{{ project.summary }}</p>
+</div>
 </div>
 </template>
 {% endfor %}

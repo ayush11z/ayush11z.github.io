@@ -1,11 +1,20 @@
 ---
 layout: project
 title: "UNDERSTAND: Emotion-Regulation Data Pipeline for LLM Alignment"
-description: An AI system that recognizes emotional distress on social media and responds supportively.
+description: An AI system that recognizes emotional distress on social media and responds supportively, grounded in a clinically-validated emotion-regulation framework rather than generic helpfulness.
 img: images/projects/understand-project.png
 importance: 1
 category: Research
 stack: ["Vertex AI", "DPO", "LoRA", "Transformers"]
+summary: >-
+  The UNDERSTAND project trains language models to recognize when someone online is struggling
+  emotionally and respond with genuine, clinically-grounded support instead of a generic reply. I
+  built a Reddit-based data pipeline that collected and safety-filtered over 110,000
+  emotional-situation samples, then labeled them across all nine dimensions of the CERQ (Cognitive
+  Emotion Regulation Questionnaire) framework to distinguish regulated from dysregulated
+  responses. After benchmarking open-source models like Qwen, Mistral, and LLaMA against Gemini, I
+  fine-tuned transformer models with DPO and LoRA on 4x A100 Nautilus clusters — grounding the
+  alignment work in a validated psychological framework rather than abstract helpfulness.
 ---
 
 The UNDERSTAND project explores building a therapeutic AI system that can recognize when someone on social media is struggling emotionally and respond in a genuinely supportive, regulated way — rather than a generic or dismissive one. Using CERQ (Cognitive Emotion Regulation Questionnaire) as a psychological framework, the project builds a large, labeled dataset of real emotional situations and paired responses to fine-tune a model's sensitivity to human emotional cues, something that doesn't exist off-the-shelf.
