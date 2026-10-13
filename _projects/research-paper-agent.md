@@ -4,7 +4,7 @@ title: "Research Paper Agent"
 description: An AI research assistant that searches arXiv, OpenAlex, and Semantic Scholar from five angles at once, expands results via citation graphs, and flags gaps and contradictions in the literature.
 importance: 11
 category: Research
-stack: ["LangChain", "Ollama", "Gemini", "Express.js"]
+stack: ["Python", "LangChain", "Ollama", "Gemini", "Express.js", "Node.js"]
 github: https://github.com/ayush11z/research-paper-agent
 summary: >-
   Literature reviews are tedious partly because a single search query only surfaces one slice of

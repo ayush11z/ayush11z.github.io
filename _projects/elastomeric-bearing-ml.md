@@ -4,7 +4,7 @@ title: "Elastomeric Bearing Performance Prediction Using Machine Learning"
 description: A peer-reviewed study combining finite element analysis with machine learning to predict how elastomeric bridge bearings deform and degrade under progressive damage; I led the machine learning modeling.
 importance: 7
 category: Research
-stack: ["ANSYS", "Python", "scikit-learn", "ANN"]
+stack: ["ANSYS", "Python", "scikit-learn", "ANN", "Gradient Boosting", "Polynomial Regression"]
 paper: https://link.springer.com/article/10.1007/s41939-025-00824-0
 summary: >-
   Elastomeric bridge bearings are usually assessed by visual inspection alone, which only catches
