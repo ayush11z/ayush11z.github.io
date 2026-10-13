@@ -11,7 +11,7 @@ blurb: "Developed Parkinson's disease detection models from speech, reaching 89%
 highlights:
   - "Developed Parkinson's detection models from speech using SVMs, CNNs, and Audio Spectrogram Transformers, reaching <strong>89% accuracy</strong>."
   - "Confirmed robustness with a <strong>20–28x separation</strong> in confidence interval width; LoRA continual learning retained <strong>95.6%</strong> of prior-task performance."
-stack: ["SVM", "CNN", "OpenL3", "Transformers"]
+stack: ["SVM", "CNN", "PyTorch", "Transformers"]
 ---
 
 At Myna Voice Labs — a research collaboration with Princeton PhD scholars — I worked on detecting Parkinson's disease from short speech recordings, in a setting where the model needs to generalize across speakers of different languages.
