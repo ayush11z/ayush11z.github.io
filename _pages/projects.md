@@ -41,6 +41,9 @@ permalink: /projects/
 {% if project.github %}
 <a href="{{ project.github }}" class="research-card-github" target="_blank" rel="noopener noreferrer">GitHub <span class="arrow">&rarr;</span></a>
 {% endif %}
+{% if project.paper %}
+<a href="{{ project.paper }}" class="research-card-github" target="_blank" rel="noopener noreferrer">Paper <span class="arrow">&rarr;</span></a>
+{% endif %}
 </div>
 </div>
 {% endfor %}
@@ -83,6 +86,9 @@ permalink: /projects/
 <p class="modal-project-summary">{{ project.summary }}</p>
 {% if project.github %}
 <a href="{{ project.github }}" class="modal-project-github" target="_blank" rel="noopener noreferrer">View on GitHub <span class="arrow">&rarr;</span></a>
+{% endif %}
+{% if project.paper %}
+<a href="{{ project.paper }}" class="modal-project-github" target="_blank" rel="noopener noreferrer">View Paper <span class="arrow">&rarr;</span></a>
 {% endif %}
 </div>
 </div>
