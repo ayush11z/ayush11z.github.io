@@ -33,8 +33,10 @@ permalink: /projects/
 <h4 class="research-title">{{ project.title }}</h4>
 <p class="research-desc">{{ project.description }}</p>
 {% if project.stack %}
+{% assign visible_stack = project.stack | slice: 0, 4 %}
+{% assign remaining = project.stack.size | minus: 4 %}
 <div class="research-stack">
-{% for item in project.stack %}<span>{{ item }}</span>{% unless forloop.last %}<span class="dot">&middot;</span>{% endunless %}{% endfor %}
+{% for item in visible_stack %}<span>{{ item }}</span>{% unless forloop.last %}<span class="dot">&middot;</span>{% endunless %}{% endfor %}{% if remaining > 0 %}<span class="dot">&middot;</span><span class="stack-more">+{{ remaining }} more</span>{% endif %}
 </div>
 {% endif %}
 </a>
