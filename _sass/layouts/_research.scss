@@ -82,17 +82,24 @@
 
   .research-stack {
     font-family: 'JetBrains Mono', 'Fira Code', monospace;
-    font-size: 0.6875rem;
-    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--accent);
     padding-top: var(--space-4);
     border-top: 1px dashed var(--border-color);
 
     .dot {
       margin: 0 var(--space-2);
+      color: var(--text-muted);
     }
 
     .stack-more {
-      color: var(--accent);
+      color: var(--text-muted);
+      text-transform: none;
+      letter-spacing: normal;
+      font-weight: 500;
     }
   }
 
